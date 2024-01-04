@@ -5,15 +5,26 @@ body{
 font-family: 'Almarai' !important;
   padding: 0;
   margin: 0;
+  padding-top: 150px;
 }
 
 /* Header and Navigation styles */
 .main-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000000;
   text-align: center;
+
+
 }
 .logo img {
   width: 76px;
   height: 46.044px;
+}
+.scrolled{
+  background-color: rgb(219, 216, 212);
 }
 .nav-cont-1 .nav-link, .nav-cont-2 .nav-link {
   position: relative;
@@ -81,6 +92,10 @@ font-family: 'Almarai' !important;
 .custom-carousel {
   width: 100vw;
 }
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    width: 100%; /* Full width */
+}
 
 .custom-carousel .carousel-item {
   position: relative;
@@ -119,6 +134,7 @@ font-family: 'Almarai' !important;
   height: 448px;
   border-radius: 8px;
   border: 1px solid #5E718D;
+
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -212,7 +228,7 @@ padding: 70px 135px;
 }
 
 .card {
-border-radius: 10px;
+  border-radius: 36px 36px 0px 0px !important;
 text-align: center;
 margin: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -467,7 +483,7 @@ justify-content: center;
 }
 
 .subscribe-email-main {
-background-color: rgba(125, 125, 125, 0.5);
+background-color: rgba(212, 212, 212, 0.5);
 background-image: url('https://gcdnb.pbrd.co/images/6XsLvopgwpaS.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -497,7 +513,9 @@ height: 64px;
 border-top-right-radius: 8px;
 border-bottom-right-radius: 8px;
 background: #FFF;
-outline: none;
+border: none !important;
+outline: none !important;
+outline: none !important;
 text-align: right;
 padding-right: 40px;
 }
@@ -505,9 +523,10 @@ padding-right: 40px;
 .inp-btn input::placeholder{
 font-size: 24px;
 color:#5E718D;
-font-weight: 700;
+font-weight: 500;
 line-height: 140%; /* 33.6px */
 text-align: right;
+border: none;
 padding: 15px 1px;
 }
 
@@ -637,6 +656,8 @@ font-family: 'Almarai' !important;
 line-height: 28px; /* 155.556% */
 } 
 
+
+
 .f-p{
 font-family: 'Almarai';
 color: #FFF;
@@ -648,6 +669,16 @@ line-height: normal;
 opacity: 0.75;
 }
 
+
+.navbar-expanded{
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10px;
+
+}
+
 @media ((min-width: 1001px)) {
   .mobile-testmonials{
     display: none;
@@ -655,11 +686,43 @@ opacity: 0.75;
 }
 
 @media (max-width: 1000px) {
+
   .pc-testmonials{
     display: none;
   }
+}
+.navbar-toggler {
+  background-color: #244497; /* Set the background color */
+}
 
 
+.navbar-toggler{
+  z-index: 20000000000000000000;
+
+
+}
+   .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        position: fixed;
+        top: 0; /* Adjust if needed */
+        left: 0;
+        right: 0;
+        z-index: 1020;
+        background-color: rgb(248, 248, 248);
+    }
+
+    @media (min-width:992px) {
+      .hidden-image{
+        display: none !important;
+      }
+      
+    }
+@media (max-width: 968px) {
+ 
+
+.decoration-image{
+  display: none;
+}
 .container1 {
   background: none;
   padding: 0px;
@@ -686,7 +749,7 @@ opacity: 0.75;
   display: grid;
   grid-template-columns: 1fr;
 }
-.intro-h2::after {
+/* .intro-h2::after {
   content: '';
   display: block;
   width: 361px;
@@ -695,29 +758,34 @@ opacity: 0.75;
   background-image: url('https://i.ibb.co/9YVS6CH/567b7d840b45fa35ed29b535767d1a38.png');
   background-size: cover;
   text-align: center;
-  margin-top: 10px; /* Adjust as needed */
-}
+  margin-top: 10px; 
+} */
 .intro-cont-img {
 
 text-align: center;
-visibility: hidden;
+
 }
 .intro-content-2{ 
 display: flex;
 align-items: center;
 justify-content: center;
-visibility: hidden;
-}
-.intro-main{
-overflow: hidden;
-width: 100vw;
-background-color: white;
-}
-body{
 
 }
+.intro-main{
+
+width: 100%;
+background-color: white;
+display: flex;
+
+}
+
+.intro-h2{
+color: #244497;
+
+font-family: "Almarai";
+}
 .intro-content-1 p{
-  border: 1px solid;
+
   width: 385px;
   line-height: 30px;
 }
@@ -751,6 +819,8 @@ width: 385px;
 height: 319px;
 border: none !important;
 }
+
+
 
 .serv-items-cont{
 width: 100%;
@@ -890,31 +960,117 @@ line-height: 140%; /* 33.6px */
 }
 .carousel-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid;
-  height: 50% !important;
+  justify-content: center 
+  !important;
+  align-items: center !important;
+  height: 100% !important;
+  width: 100%;
+}
+
+.carousel-inner {
+  padding: 0 !important;
+}
+
+.main-box-container h2{
+  transform: translateY(-65%); /* Move the image down */
+
+  font-family: "Almarai";
 }
 
 .custom-carousel .carousel-item {
-height: 30vh;
+height: 100vh;
 }
 
 .footer-content{
 display: flex !important;
-flex-direction: column-reverse !important;
 }
 
+.intro-content-1 {
+  transform: translateY(-120%); /* Move the content up */
+}    
+.intro-h2{
+    transform: translateY(-20%);
+}
+.intro-content-2{
+  transform: translateY(-290%); /* Move the image down */
+}
+.intro-p {
+transform: translateY(190%); /* Move the image down */
+}
+.intro-content-3{
+transform: translateY(15%); /* Move the image down */
+}
+nav{
+  z-index: 10000000000000000000 !important;
+}
+.main-head {
+ z-index: 10000000000000000000 !important;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 35px;
+}
 }
 
 
 
 
-@media only screen and (max-width: 800px) and (orientation: portrait) {
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+
+
+nav{
+   z-index: 10000000000000000000 !important;
+}
+.main-head {
+  z-index: 10000000000000000000 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.logo {
+    /* Adjust as needed */
+    
+}
+
+.navbar {
+ 
+}
+
+.navbar-toggler {
+
+}
+
+/* Additional styles to ensure proper alignment and spacing */
+.navbar-brand {
+    margin-right: 15px; /* Adjust as needed */
+}
+
+/* Ensure that the navbar contents are properly aligned */
+.navbar-collapse {
+
+}
+  #carousel-adjust-h{
+    height: 30vh !important;
+    margin-top: 30px;
+  }
+
+  .intro-content-1 {
+    transform: translateY(-130%); /* Move the content up */
+}    .intro-p {
+  transform: translateY(200%); /* Move the image down */
+}
+.intro-content-3{
+  transform: translateY(-5%) !important;
+  
+}
 
   .footer-content{
-    position: relative;width: 100%;
-    height: 652px;padding: 70px 100px;
+    position: relative;
+    width: 100%;
+    height: 652px;
+    padding: 70px 100px;
   }
 
   .company-logo{
@@ -1016,4 +1172,5 @@ flex-direction: column-reverse !important;
   top: 50%;
   transform: translateY(-50%);
 }
+
 
