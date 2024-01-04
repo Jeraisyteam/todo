@@ -24,7 +24,8 @@ font-family: 'Almarai' !important;
   height: 46.044px;
 }
 .scrolled{
-  background-color: rgb(219, 216, 212);
+  transition: all 0.4s ease-in-out;
+  background-color: rgb(236, 236, 236);
 }
 .nav-cont-1 .nav-link, .nav-cont-2 .nav-link {
   position: relative;
