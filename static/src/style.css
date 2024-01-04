@@ -678,6 +678,9 @@ opacity: 0.75;
   top: 10px;
 
 }
+.all{
+  overflow: hidden !important;
+}
 
 @media ((min-width: 1001px)) {
   .mobile-testmonials{
