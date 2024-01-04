@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 50% !important;
+  background: #dedede;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 50px !important;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #244497;
+}
 body{
 font-family: 'Almarai' !important;
   padding: 0;
@@ -39,6 +60,7 @@ font-family: 'Almarai' !important;
 .nav-cont-1 .nav-link:hover {
   color: #244497 !important;
 }
+
 .nav-cont-1 .nav-link:after {
   content: '';
   position: absolute;
