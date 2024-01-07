@@ -46,7 +46,7 @@ font-family: 'Almarai' !important;
 }
 .scrolled{
   transition: all 0.4s ease-in-out;
-  background-color: rgb(236, 236, 236);
+  background-color: white;
 }
 .nav-cont-1 .nav-link, .nav-cont-2 .nav-link {
   position: relative;
@@ -55,7 +55,7 @@ font-family: 'Almarai' !important;
   font-family: 'Almarai', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out, all 0.4s ease-in-out;
 }
 .nav-cont-1 .nav-link:hover {
   color: #244497 !important;
@@ -1156,9 +1156,42 @@ translate: unset;
   transform: unset !important;
 }
 
-.about-us-2 .try{
+.about-us-2 {
 
 
+}
+
+
+.abt-us-insides{
+  display: flex;
+  
+  border: 8px solid yellow !important;
+
+}
+
+
+
+.about-us-2 .intro-content-1{
+  width: fit-content;
+}
+
+.try{
+margin-top: 80px;
+
+}
+
+.try .intro-p{
+padding-top: 80px;
+
+}
+
+.try .btns-div{
+  padding-top: 90px;
+}
+
+
+.about-us-2{
+  padding: unset !important;
 }
 
 }
@@ -1322,7 +1355,11 @@ nav{
 #abt-us-2 .intro-content-3 {
   transform: unset !important;
 }
+
+
+
 }
+
 
 
 
@@ -1445,3 +1482,5 @@ margin-right:120px ;
   color: white;
   border: none;
 }
+
+
