@@ -705,17 +705,51 @@ opacity: 0.75;
   overflow: hidden !important;
 }
 
+@media ((max-width: 700px)) {
+.hero-img-t{
+  height: 50vh !important;
+}
+
+.hero-img-t img{
+  height: 100%;
+}
+
+.hero-img-t h1{
+  font-size: 90px !important;
+}
+
+.hero-img-t h3{
+  font-size: 40px !important;
+}
+
+.texts{
+  position: absolute;
+  text-align: right;
+  right: 0 !important;
+  left: 0 !important;
+  z-index: 1000;
+}
+
+.texts h3{
+margin-right:0 !important;
+}
+}
+
+
 @media ((min-width: 1001px)) {
   .mobile-testmonials{
     display: none;
+  }
+
+  .about-us-2-phones{
+    display: none !important;
+  
   }
 }
 
 @media (max-width: 1000px) {
 
-  .pc-testmonials{
-    display: none;
-  }
+
 }
 .navbar-toggler {
   background-color: #244497; /* Set the background color */
@@ -1071,7 +1105,7 @@ gap: 100px;
   display: flex !important;
   overflow: hidden !important;
 flex-direction: column-reverse;
-border: 1px solid red;
+
 padding: 120px 0px !important;
 flex-wrap: unset;
 }
@@ -1123,7 +1157,7 @@ width: 589px;
 flex-direction: column;
 align-items: flex-end;
 gap: 32px;
-flex-shrink: 0;  flex-direction: column-reverse !important;
+flex-shrink: 0; 
 }
 
 
@@ -1193,6 +1227,56 @@ padding-top: 80px;
 .about-us-2{
   padding: unset !important;
 }
+.about-us-2-pc{
+  display: none 
+  !important;
+}
+.about-us-2-phones {
+  align-items: center !important;
+  flex-direction: column !important;
+  padding: 30px 0px !important;
+}
+.about-us-2-phones .intro-content-1{
+  
+width:unset !important;
+text-align: center !important;
+height: unset;
+
+  
+}
+
+.about-us-2-phones .intro-h2{
+    order: unset !important;
+}
+
+
+.about-us-2-phones .intro-p{
+  width: fit-content !important;
+}
+.about-us-2-phones .intro-content-1{
+  align-items: center;
+}
+
+.about-us-2-phones .btns-div{
+  
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  flex-direction: unset !important;
+}
+
+
+.about-us-2-phones .btn-2{
+  margin-right:unset;
+  margin-bottom: 15px;
+
+}
+  .pc-testmonials{
+    display: none;
+  }
+
+
 
 }
 
@@ -1448,7 +1532,7 @@ font-size: 64px;
 font-style: normal;
 font-weight: 800;
 line-height: 160%; /* 102.4px */
-margin-right:120px ;
+margin-right:120px;
 }
 
 #about-us-main{
