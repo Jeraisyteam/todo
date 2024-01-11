@@ -1834,9 +1834,7 @@ line-height: 160%;
   
   @media (min-width: 769px) {
 
-    .intro-main-phones{
-      display: none !important;
-    }
+
 
     .phone-res-serv{
       display: none !important;
@@ -1883,13 +1881,13 @@ line-height: 160%;
 
     .text-2 .working-hrs{
       color: var(--primary-one, #244497);
-text-align: center;
-font-family: Almarai;
-font-size: 20px;
-font-style: normal;
-font-weight: 800;
-line-height: 160%; /* 32px */
-text-decoration-line: underline;
+      text-align: center;
+      font-family: Almarai;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 160%; /* 32px */
+      text-decoration-line: underline;
     }
 
     .text-2 p{
@@ -1903,4 +1901,13 @@ text-decoration-line: underline;
       }
     }
 
+    @media (min-width:769px) {
+       .intro-main-phones{
+        display: none !important;
+      }
+
+    }
+
+
+ 
 
