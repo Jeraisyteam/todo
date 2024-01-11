@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+import { Component, tags } from '@odoo/owl';
+
+export class HomePage extends Component {
+    static template = tags.xml`
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <script src="https://use.fortawesome.com/1ce05b4b.js"></script>
@@ -539,3 +543,6 @@ window.addEventListener('scroll', function() {
 </script>
 </body>
 </html>
+
+    `;
+}

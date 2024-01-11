@@ -1,47 +1,61 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Title</title>
-<style>
-  .about-us-2 {
-    display: flex;
-    flex-wrap: wrap; /* Wrap children if needed */
-    justify-content: center;
-    text-align: center;
-  }
-
-  .intro-content-1 {
-    flex-basis: 100%; /* Force to take full width */
-  }
-
-  .intro-content-2 {
-    flex-basis: 100%; /* Force to take full width */
-  }
-
-  .intro-cont-img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  @media screen and (max-width: 600px) {
-    /* You can add additional styles for smaller screens here if needed */
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
+  <style>
+    .sub{
+     background-color: rgb(236, 13, 13);
+     color: white;
+     border: none;
+     border-radius: 2px;
+     width: 115px;
+     height: 36px;
+     cursor: pointer;
+    }
+    .JOIN{
+    background-color: white;
+    border-color: rgb(0, 66, 245);
+    border-width: 1px;
+    color: rgb(0, 66, 245);
+    height: 36px;
+    width: 65px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 10px;
 
-<div class="about-us-2" id="about-us-main">
-  <div class="intro-content-1">
-    <h2>من نحن</h2>
-    <p>نجدة هي علامة تجارية مملوكة لشركة...</p>
-    <!-- Buttons here -->
-  </div>
-  <div class="intro-content-2">
-    <img src="https://i.ibb.co/9YVS6CH/567b7d840b45fa35ed29b535767d1a38.png" alt="" class="intro-cont-img">
-  </div>
-</div>
+    }
+    .tweet{
+      background-color: rgb(0, 166, 255);
+      color: white;
+      border: none;
+      height: 36px;
+      width: 65px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .sub:hover{
+      opacity: 0.7;
+    }
+    .JOIN:hover{
+      background-color: rgb(0, 66, 245);
+      color: white;
+    }
+    .tweet:hover{
+      box-shadow: 1px 3px 5px rgb(145, 141, 141);
+    }
 
+
+  </style>
+
+
+
+
+  <button class= "sub";>SUBSCRIBE</button>
+  <button class="JOIN";>JOIN</button>
+  <button class="tweet";>Tweet</button>
 </body>
 </html>

@@ -26,7 +26,7 @@ body{
 font-family: 'Almarai' !important;
   padding: 0;
   margin: 0;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 /* Header and Navigation styles */
@@ -313,16 +313,6 @@ font-size: 24px;
 color: #244497;
 font-weight: 700;
 }
-
-/* Add media queries for responsiveness */
-@media (max-width: 768px) {
-.container {
-  flex-direction: column;
-}
-}
-
-
-
 
 
 
@@ -737,6 +727,18 @@ margin-right:0 !important;
 
 
 @media ((min-width: 1001px)) {
+  .phones-contact-form{
+    display: none !important;
+  }
+
+  .pc-contact-form{
+    background-image: url(https://gcdnb.pbrd.co/images/6XsLvopgwpaS.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
   .mobile-testmonials{
     display: none;
   }
@@ -748,7 +750,16 @@ margin-right:0 !important;
 }
 
 @media (max-width: 1000px) {
+.pc-contact-form{
+  display: none !important;
+}
 
+.phones-contact-form .form-cont-1{
+  gap: 24px;
+  text-align: center;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
 }
 .navbar-toggler {
@@ -789,9 +800,9 @@ flex-shrink: 0;
 }
 
 .about-us-2 .intro-content-2{
-width: 552.316px;
-height: 231px;
-}
+  width: 552.316px;
+  height: 231px;
+  }
    
       .hidden-image{
         display: none !important;
@@ -827,10 +838,7 @@ height: 231px;
 .intro-content-1{ 
   text-align: center;
 }
-.intro-content-1 {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+
 /* .intro-h2::after {
   content: '';
   display: block;
@@ -874,7 +882,7 @@ font-family: "Almarai";
 
 
 .intro-content-2{
-  width: 361px;
+  width: 100%;
   height: auto;
 }
 
@@ -1054,7 +1062,7 @@ line-height: 140%; /* 33.6px */
 }
 
 .main-box-container h2{
-  transform: translateY(-65%); /* Move the image down */
+
 
   font-family: "Almarai";
 }
@@ -1068,18 +1076,7 @@ display: flex !important;
 }
 
 
-.intro-h2{
-    transform: translateY(-20%);
-}
-.intro-content-2{
-  transform: translateY(-290%); /* Move the image down */
-}
-.intro-p {
-transform: translateY(190%); /* Move the image down */
-}
-.intro-content-3{
-transform: translateY(15%); /* Move the image down */
-}
+
 
 
 
@@ -1251,7 +1248,7 @@ height: unset;
 
 
 .about-us-2-phones .intro-p{
-  width: fit-content !important;
+  width: 385px !important;
 }
 .about-us-2-phones .intro-content-1{
   align-items: center;
@@ -1325,15 +1322,8 @@ nav{
     margin-top: 30px;
   }
 
-  .intro-content-1 {
-    transform: translateY(-130%); /* Move the content up */
-}    .intro-p {
-  transform: translateY(200%); /* Move the image down */
-}
-.intro-content-3{
-  transform: translateY(-15%) !important;
-  
-}
+
+
 
   .footer-content{
     position: relative;
@@ -1421,15 +1411,6 @@ nav{
   }
 
 
-  .intro-content-1 {
-    transform: translateY(-130%); /* Move the content up */
-}    .intro-p {
-  transform: translateY(200%); /* Move the image down */
-}
-.intro-content-3{
-  transform: translateY(-5%) !important;
-  
-}
 
 
 #abt-us-2 .intro-content-1,
@@ -1568,3 +1549,304 @@ margin-right:120px;
 }
 
 
+
+
+
+.contact-form{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 70px 105px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap:wrap ;
+}
+
+.form-cont-1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content:space-between;
+  align-self: stretch;
+}
+
+.form-cont-1 h1{
+  color: var(--primary-one, #244497);
+font-family: Almarai;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.61738rem; /* 64.695% */
+}
+
+
+.form-cont-1 input,.form-cont-1 button{
+  padding: 1rem 0.5rem;
+  width: 32.1rem;
+font-family: IBM Plex Sans;
+font-size: 0.8rem;
+font-style: normal;
+font-weight: 700;
+line-height: 0.1rem; /* 142.857% */
+}
+
+.form-cont-1 input{
+  text-align: right;
+  border-radius: 0.25rem;
+  border: 1px solid var(--text, #5E718D);
+  background: #FFF;
+}
+
+.form-cont-1 input::placeholder{
+  font-size: 14px;
+  padding:10px 1px;
+  font-family: Almarai;
+  text-align: right;
+}
+
+.form-cont-1 button{
+  background-color: #F06030;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.64694rem;
+}
+
+.middle-service{
+  padding: 70px 105px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.services-texts-cont{
+  text-align: right;
+}
+
+.services-texts{
+  display: flex;
+  align-items: center !important;
+  flex-direction: row-reverse;
+  text-align: right;
+  justify-content: center !important;
+  gap: 12px;
+  width: 613px;
+}
+
+
+.services-texts p{
+  color: var(--primary-one, #244497);
+text-align: right;
+font-family: Almarai;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 2.1rem */
+}
+
+.services-texts span{
+  color: var(--text, #5E718D);
+font-family: Almarai;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+}
+
+
+.res-serv{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 70px 105px;
+  flex-wrap: wrap;
+}
+
+.contract-det {
+  flex-wrap: wrap !important;
+  direction: rtl; /* Right-to-left direction */
+  list-style-position: inside; /* Position bullets inside the list item */
+}
+
+.contract-det li{
+  color: var(--text, #5E718D);
+text-align: right;
+font-family: Almarai;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: 200%; /* 40px */
+}
+
+.all-res-serv-text{
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.all-res-serv-text p{
+  width: 41rem;
+  text-align: right;
+  color: var(--text, #5E718D);
+  text-align: right;
+  font-family: Almarai;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 32px */
+}
+
+
+
+.all-res-serv-text .btn-div{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+
+}
+
+
+.text-1{
+  text-align: center !important;
+}
+.text-1 h2{
+  width: 640px;
+  color: #FFF;
+text-align: center;
+font-family: Almarai;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 51.2px */
+}
+
+ h2 span{
+  color: #FFF;
+font-family: Almarai;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%;
+}
+
+.text-1 h4{
+  color: #FFF;
+font-family: Almarai;
+font-size: 36px;
+font-style: normal;
+font-weight: 800;
+line-height: 160%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }  
+   
+  }
+  
+  
+  @media (max-width: 768px) {
+
+
+.intro-main-pc{
+  display: none !important;
+}
+
+
+    .phone-services .services-texts-cont{
+      display: flex;
+      flex-direction: column;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+
+    .phone-services .img-div img{
+      width: 100%;
+    }
+
+    .phone-res-serv .all-res-serv-text{
+      display: flex !important;
+      flex-direction: column;
+      align-items: center !important;
+      justify-content: center !important;
+    } 
+     .phone-res-serv p{
+      width: 23.1875rem;
+      margin-top:10px;
+     }
+     .phone-res-serv .contract-det li{
+      width: 23.1875rem;
+      font-size: 1.1rem;
+     } 
+     .phone-res-serv .btn-div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .phone-res-serv .btn-div .btn-2{
+      margin: 0 !important;
+     }
+    .services-texts{
+      width: 23.125rem;
+    } 
+    .services-texts svg{
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .all-res-serv-text{
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .pc-services {
+      display: none !important;
+    }
+
+    .pc-res-serv{
+      display: none !important;
+    }
+
+    .intro-content-1{
+      width: unset;
+      height: unset;
+      text-align: center;
+    }
+
+    .form-cont-1 input,.form-cont-1 button{
+      width: 80%;
+    }
+
+
+  }
+  
+  @media (min-width: 769px) {
+
+    .intro-main-phones{
+      display: none !important;
+    }
+
+    .phone-res-serv{
+      display: none !important;
+    }
+
+
+    .phone-services {
+      display: none !important;
+    }
+  }
+      .resident-serv{
+      flex-direction: row-reverse !important;
+    }
