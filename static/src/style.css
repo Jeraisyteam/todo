@@ -191,7 +191,7 @@ font-family: 'Almarai' !important;
 
 .intro-content-1{
   width: 435px;
-  height: 361px;
+
   text-align: right;
 }
 
@@ -892,7 +892,7 @@ font-family: "Almarai";
 }
 
 .intro-h2 {
-  order: 1;
+
 }
 
 
@@ -1843,10 +1843,64 @@ line-height: 160%;
     }
 
 
-    .phone-services {
-      display: none !important;
-    }
+
   }
       .resident-serv{
       flex-direction: row-reverse !important;
     }
+
+
+    .najdah-header{
+      color: var(--primary-two, #F06030);
+text-align: center;
+font-family: Almarai;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 64px */
+    }
+
+    .icon-info{
+      display: flex !important;
+      text-align: ;
+      align-items: center!important;
+      justify-content:end !important;
+      gap: 20px;
+    }
+
+    .icon-info p{
+      color: var(--primary-one, #244497);
+text-align: center;
+font-family: Almarai;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: 160%; /* 32px */
+      text-align: right !important;
+      margin: auto 0px;
+    } 
+
+
+    .text-2 .working-hrs{
+      color: var(--primary-one, #244497);
+text-align: center;
+font-family: Almarai;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: 160%; /* 32px */
+text-decoration-line: underline;
+    }
+
+    .text-2 p{
+      
+    }
+
+    @media (max-width:950px) {
+          
+      .phone-services {
+        display: none !important;
+      }
+    }
+
+
