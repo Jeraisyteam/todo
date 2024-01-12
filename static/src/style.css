@@ -1746,20 +1746,15 @@ font-weight: 800;
 line-height: 160%;
 }
 
-@media (max-width: 768px) {
-  .container {
+
+  
+  @media (max-width: 768px) { 
+    .container {
     flex-direction: column;
   }  
-   
-  }
-  
-  
-  @media (max-width: 768px) {
 
 
-.intro-main-pc{
-  display: none !important;
-}
+
 
 
     .phone-services .services-texts-cont{
@@ -1901,7 +1896,7 @@ line-height: 160%;
       }
     }
 
-    @media (min-width:769px) {
+    @media (min-width:1001px) {
        .intro-main-phones{
         display: none !important;
       }
@@ -1911,3 +1906,10 @@ line-height: 160%;
 
  
 
+@media (max-width: 1000px) {
+    
+  .intro-main-pc{
+    display: none !important;
+  }
+  }
+  
