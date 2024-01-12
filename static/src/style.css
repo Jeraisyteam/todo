@@ -743,9 +743,7 @@ margin-right:0 !important;
 
 
 @media ((min-width: 1001px)) {
-  .phones-contact-form{
-    display: none !important;
-  }
+
 
   .pc-contact-form{
     background-image: url(https://gcdnb.pbrd.co/images/6XsLvopgwpaS.png);
@@ -766,9 +764,7 @@ margin-right:0 !important;
 }
 
 @media (max-width: 1000px) {
-.pc-contact-form{
-  display: none !important;
-}
+
 
 .phones-contact-form .form-cont-1{
   gap: 24px;
@@ -1928,4 +1924,25 @@ line-height: 160%;
     display: none !important;
   }
   }
+  
+
+  @media (max-width: 1180px) {
+
+    .phones-contact-form input{
+     margin-bottom: 15px !important;
+    }
+    .pc-contact-form{
+      display: none !important;
+    }
+  }
+
+
+
+    @media (min-width: 1181px) {
+
+      .phones-contact-form{
+        display: none !important;
+      }
+  }
+
   
