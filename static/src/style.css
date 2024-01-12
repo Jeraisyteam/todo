@@ -126,7 +126,7 @@ font-family: 'Almarai' !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
 }
 .custom-carousel {
   width: 100vw;
@@ -895,7 +895,7 @@ font-family: "Almarai";
 
 
 .intro-content-2{
-  
+  margin: auto;
   height: auto;
 }
 
@@ -1067,14 +1067,14 @@ line-height: 140%; /* 33.6px */
   !important;
   align-items: center !important;
   width: 100%;
-  height: 50vh;
+  height: 78vh;
 }
 
 .carousel-inner {
   padding: 0 !important;
 }
 
-.main-box-container h2{
+.main-box-container .main-box-container-head{
 
 transform: translateY(-50px);
   font-family: "Almarai";
@@ -1945,6 +1945,15 @@ line-height: 160%;
 
       .phones-contact-form{
         display: none !important;
+      }
+  }
+
+
+
+    @media (min-width: 2100px) {
+
+      .carousel-container{
+        height: 100vh !important;
       }
   }
 
