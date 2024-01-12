@@ -895,7 +895,7 @@ font-family: "Almarai";
 
 
 .intro-content-2{
-  width: 100%;
+  
   height: auto;
 }
 
@@ -1279,7 +1279,8 @@ height: unset;
 
 .about-us-2-phones .btn-2{
   margin-right:unset;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+  margin-right: 15px;
 
 }
   .pc-testmonials{
@@ -1919,7 +1920,9 @@ line-height: 160%;
  
 
 @media (max-width: 1000px) {
-    
+    .about-us-2-phones .{
+
+    }
   .intro-main-pc{
     display: none !important;
   }
