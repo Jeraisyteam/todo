@@ -68,6 +68,7 @@ font-family: 'Almarai' !important;
   height: 2px;
   bottom: -3px;
   left: 0;
+  color: #244497 !important;
   background-color: #244497;
   visibility: hidden;
   transition: width 0.4s ease-in-out;
@@ -75,6 +76,21 @@ font-family: 'Almarai' !important;
 .nav-cont-1 .nav-link:hover:after {
   visibility: visible;
   width: 100%;
+}
+
+.nav-cont-1 .nav-link.active {
+  color: #244497 !important;
+}
+
+.nav-cont-1 .nav-link.active:after {
+  content: '';
+  position: absolute;
+  width: 100%; /* Full width to indicate active */
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #244497;
+  visibility: visible;
 }
 .download-btn {
   padding: 9px 13px;
