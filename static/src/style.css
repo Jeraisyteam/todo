@@ -714,11 +714,11 @@ opacity: 0.75;
 
 @media ((max-width: 700px)) {
 .hero-img-t{
-  height: 50vh !important;
+  height: 80vh !important;
 }
 
 .hero-img-t img{
-  height: 100%;
+  height: 100% !important;
 }
 
 .hero-img-t h1{
@@ -728,6 +728,18 @@ opacity: 0.75;
 .hero-img-t h3{
   font-size: 40px !important;
 }
+.icon-info{
+  justify-content: center !important;
+}
+.icon-info p{
+margin:10px 0px !important;
+}
+
+.form-cont-2 svg{
+  width: 300px;
+}
+
+.form-cont-2 {}
 
 .texts{
   position: absolute;
@@ -735,8 +747,22 @@ opacity: 0.75;
   right: 0 !important;
   left: 0 !important;
   z-index: 1000;
+  text-align: center !important;
 }
 
+.text-1 h2 {
+  width: unset !important;
+}
+.p-work-days{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-work-days p{
+  display: flex !important;
+  flex-direction: row !important;
+}
 .texts h3{
 margin-right:0 !important;
 }
@@ -1872,7 +1898,7 @@ line-height: 160%;
     .icon-info{
       display: flex !important;
       align-items: center!important;
-      justify-content:end !important;
+      justify-content:end ;
       gap: 20px;
     }
 
@@ -1943,7 +1969,7 @@ line-height: 160%;
  
 
 @media (max-width: 1000px) {
-    .about-us-2-phones .{
+    .about-us-2-phones {
 
     }
   .intro-main-pc{
@@ -1951,11 +1977,13 @@ line-height: 160%;
   }
   }
   
-
+.no-bg::after{
+background: none;
+}
   @media (max-width: 1180px) {
 
     .phones-contact-form input{
-     margin-bottom: 15px !important;
+     /* margin-bottom: 15px !important; */
     }
     .pc-contact-form{
       display: none !important;
