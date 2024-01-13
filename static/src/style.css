@@ -2015,3 +2015,73 @@ line-height: 160%;
    
   }
 
+  @media (max-width:300px){
+    .serv-item{
+      max-width: 250px;
+    }
+
+    .serv-p{
+      width: 230px;
+    }
+
+    .card-content p {
+
+      width: 300px;
+      font-size: 14px;
+    }
+
+
+    .download-app-cont1 h1 {
+      font-size: 25px !important;
+      width: 250px !important;
+
+    }
+
+    .download-app-cont1 p {
+      font-size: 14px !important;
+      width: 250px !important;
+
+    }  
+     
+    .download-app-cont1 a {
+      width: 204.129px !important;
+
+    }
+
+    .subscribe-email-main h1 {
+      width: 250px;
+      font-size: 18px;
+    }
+
+    .inp-btn input {
+      width: unset;
+    }
+    .beside-r {
+      left: 0;
+    }
+
+    .footer-social-icons {
+      bottom: 140px;
+      left: 50px;
+    }
+
+    .intro-content-3 {
+      width: 300px;
+
+    }
+
+    .intro-p{
+      padding: 0px 25px;
+      height: unset;
+    }
+
+    .intro-content-3 {
+      height: unset;
+    }
+
+    .intro-content-3 img{
+      width: 300px;
+      object-fit: cover;
+      height: auto;
+    }
+  }
