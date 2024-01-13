@@ -1993,3 +1993,25 @@ line-height: 160%;
     }
   }
   
+
+
+  @media (max-width:600px){
+    #carousel-adjust-h{
+      height: 25vh !important;
+    }
+
+   
+  }
+
+  @media (max-width:400px){
+    .intro-content-2{
+      margin: 0!important;
+    }
+
+    .intro-content-1 p {
+      width: 300px;
+    }
+
+   
+  }
+
