@@ -2084,4 +2084,10 @@ line-height: 160%;
       object-fit: cover;
       height: auto;
     }
+
+    .download-app-cont2 img {
+      width: 280px;
+      height: auto;
+     
+    }
   }
