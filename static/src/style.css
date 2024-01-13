@@ -1497,6 +1497,7 @@ nav{
 }
 
 .hero-img-t img{
+  height: 70vh;
   width: 100%;
   object-fit: cover;
 }
@@ -1859,7 +1860,6 @@ line-height: 160%;
 
     .najdah-header{
       color: var(--primary-two, #F06030);
-      text-align: center;
       font-family: Almarai;
       font-size: 40px;
       font-style: normal;
@@ -1886,16 +1886,37 @@ line-height: 160%;
       margin: auto 0px;
     } 
 
+    .top-pad{
+      padding-top: 40px;
+    }
 
     .text-2 .working-hrs{
       color: var(--primary-one, #244497);
-      text-align: center;
       font-family: Almarai;
       font-size: 20px;
       font-style: normal;
       font-weight: 800;
       line-height: 160%; /* 32px */
       text-decoration-line: underline;
+    }
+
+
+    .p-work-days{
+      color: var(--primary-one, #244497);
+      font-family: Almarai;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 160%; /* 2rem */
+    }
+
+    .p-work-days span{
+      color: var(--primary-two, #F06030);
+      font-family: Almarai;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 160%;
     }
 
     .text-2 p{
