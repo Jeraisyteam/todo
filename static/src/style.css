@@ -127,7 +127,7 @@ font-family: 'Almarai' !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 100vh;
 }
 .custom-carousel {
   width: 100vw;
