@@ -284,14 +284,14 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 .blue-card {
   border-radius: 36px 36px 0px 0px;
-  background: #4964C6;
+  background: #4964C6 !important;
   width: 500px;
   height:433px ;
 }
 
 .orange-card {
   border-radius: 36px 36px 0px 0px;
-  background: #F2784F;
+  background: #F2784F !important;
   width: 500px;
   height:433px ;
 }
@@ -810,7 +810,7 @@ margin-right:0 !important;
 
 }
 .navbar-toggler {
-  background-color: #244497; /* Set the background color */
+  background-color: #244497 !important; /* Set the background color */
 }
 
 
