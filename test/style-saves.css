@@ -29,15 +29,7 @@ font-family: 'Almarai' !important;
   padding-top: 120px;
 }
 
-.own-styles{
-  color: var(--primary-one, #244497);
-  text-align: center;
-  font-family: Almarai;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 160%;
-}
+
 /* Header and Navigation styles */
 .main-head {
   position: fixed;
@@ -135,7 +127,7 @@ font-family: 'Almarai' !important;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: 100vh;
 }
 .custom-carousel {
   width: 100vw;
@@ -274,7 +266,15 @@ background-size: cover;
 width: 100%;
 padding: 70px 135px;
 }
-
+.own-styles{
+  color: var(--primary-one, #244497);
+  text-align: center;
+  font-family: Almarai;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 160%;
+}
 .card {
   border-radius: 36px 36px 0px 0px !important;
 text-align: center;
@@ -1953,9 +1953,7 @@ line-height: 160%;
       font-style: normal;
       font-weight: 800;
       line-height: 160%;
-    }  .phone-services {
-        display: none !important;
-      }
+    }
 
     .text-2 p{
       
@@ -2129,3 +2127,5 @@ background: none;
      
     }
   }
+
+  
