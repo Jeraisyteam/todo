@@ -6,7 +6,7 @@ state = useState({ activeComponent: 1 });
 
 setCurrentComponentAndActive(componentNumber) {
     this.props.setCurrentCompenent(componentNumber);
-    this.state.activeComponent = componentNumber;
+    this.state.activeCompenent = componentNumber;
 }
 
 static template=xml`
