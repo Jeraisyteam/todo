@@ -26,13 +26,13 @@ static template=xml`
 <div class="navbar-nav mr-auto nav-cont-1">
 <a class="nav-link" href="#">     
 <img class="hidden-image" src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="" width="76px" height="53px"/></a>
-<a class="nav-link" t-on-click="() => props.setCurrentCompenent(1)" t-att-class="{ 'active': state.activeComponent === 1 }">الرئيسية</a>
+<a class="nav-link" t-on-click="() => props.setCurrentCompenent(1)" t-att-class="{ 'active': state.activeCompenent === 1 }">الرئيسية</a>
 
-<a class="nav-link"  t-on-click="()=>props.setCurrentCompenent(5)"  t-att-class="{ 'active': state.activeComponent === 5 }">عن نجدة</a>
-<a class="nav-link" t-on-click="()=>props.setCurrentCompenent(4)"  t-att-class="{ 'active': state.activeComponent === 4 }">خدمات المقيمة</a>
-<a class="nav-link"  t-on-click="()=>props.setCurrentCompenent(3)"   t-att-class="{ 'active': state.activeComponent === 3 }">خدمات الزيارة</a>
+<a class="nav-link"  t-on-click="()=>props.setCurrentCompenent(5)"  t-att-class="{ 'active': state.activeCompenent === 5 }">عن نجدة</a>
+<a class="nav-link" t-on-click="()=>props.setCurrentCompenent(4)"  t-att-class="{ 'active': state.activeCompenent === 4 }">خدمات المقيمة</a>
+<a class="nav-link"  t-on-click="()=>props.setCurrentCompenent(3)"   t-att-class="{ 'active': state.activeCompenent === 3 }">خدمات الزيارة</a>
 <a class="nav-link">برنامج الولاء</a>
-<a class="nav-link"  t-on-click="()=>props.setCurrentCompenent(2)"   t-att-class="{ 'active': state.activeComponent === 2 }">اتصل بنا</a>
+<a class="nav-link"  t-on-click="()=>props.setCurrentCompenent(2)"   t-att-class="{ 'active': state.activeCompenent === 2 }">اتصل بنا</a>
 
 </div>
 <div class="nav-cont-2">
