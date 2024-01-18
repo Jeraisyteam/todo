@@ -1395,7 +1395,10 @@ class="intro-cont-img"/>
 
 
 export class ContactUs extends Component{
-static template=xml`<hero class="hero-img-t no-bg" >
+static template=xml`
+
+<div class="all">
+<hero class="hero-img-t no-bg" >
 <img src="https://i.ibb.co/Wyx4kwD/i-Stock-1249788942-e1608664728132.jpg" alt=""/>
 <div class="texts">
 <div class="text-12">
@@ -1615,7 +1618,7 @@ static template=xml`<hero class="hero-img-t no-bg" >
 
 
 </div>
-
+</div>
 `
 }
 export class Root extends Component{

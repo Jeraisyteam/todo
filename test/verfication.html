@@ -1,12 +1,46 @@
-<!-- This is your main HTML file -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Modal</title>
-<link rel="stylesheet" href="styles.css">
+<title>Verification Code Input</title>
 <style>
+
+.verification-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.verification-box {
+  width: 40px; 
+  height: 40px;
+  margin: 0 10px; 
+  border: 1px solid var(--primary-two, #F06030);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px; 
+}
+
+
+.verification-box:focus {
+  outline: none;
+  border-color: var(--primary-one, #244497);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 480px) {
+  .verification-container {
+    padding: 10px;
+  }
+  .verification-box {
+    width: 10vw; /* Responsive width */
+    height: 10vw; /* Responsive height */
+    margin: 0 3vw; /* Responsive spacing */
+  }
+}
+
+
 .box-head {
   color: var(--primary-one, #244497);
   font-family: 'Almarai';
@@ -191,106 +225,65 @@
     font-size: 20px;
   }
 }
-
 </style>
 </head>
 <body>
 
-<!-- Login Button that triggers the modal -->
-<button id="loginBtn">تسجيل الدخول</button>
 
-<!-- The Modal -->
-<div id="loginModal" class="modal">
+  <div id="loginModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="content"></div>
-    <h2 class="box-head">بدء تسجيل الدخول او التسجيل لحجز الخدمة</h2>
-    <div class="label-input">
-      <label for="phone" class="label-phone">رقم الهاتف</label>
-      <div class="phone-input-container">
-        <select class="flag-dropdown" id="country-flag-dropdown" onchange="updateCountryCode()">
-          <option value="+1" data-country-code="US">🇺🇸</option>  
-          <option value="+91" data-country-code="IN">🇮🇳</option>
-          <option value="+966" data-country-code="SA" selected>SA</option> 
-        </select>
-        
-        
-        <div class="vertical-line"></div>
-        <span class="
-      country-code" id="dial-code">+966</span>
-      
-        <div class="editable-part" contenteditable="true" id="editable-part"></div>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="content"></div>
+      <h2 class="box-head">رمز التحقيق</h2>
+      <div class="verification-container">
+
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
       </div>
-        </div>
-
-      <button type="submit" class="btn blue">تسجيل الدخول</button>
-      <button type="button" class="btn orange">تسجيل الدخول كزائر</button>
-      <p class="problem-text">
-        
-        نواجه مشكلة في تسجيل الدخول? 
-      <span class="problem-contact">اتصل بنا</span>
-      </p>
-   
+  
+        <button type="submit" class="btn blue">تسجيل الدخول</button>
+       
+        <p class="problem-text">
+          
+          نواجه مشكلة في تسجيل الدخول? 
+        <span class="problem-contact">اتصل بنا</span>
+        </p>
+     
+    </div>
+  
   </div>
+  
 
-</div>
+
+
 
 <script>
-  // Get the modal
-var modal = document.getElementById("loginModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("loginBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = "none";
-}
-}
-
-
-function updateCountryCode() {
-    var countryCode = document.getElementById('country-flag-dropdown').value;
-    document.getElementById('dial-code').textContent = countryCode;
-  }
-
-
-  document.addEventListener('DOMContentLoaded', updateCountryCode);
-
-
-  document.getElementById('country-flag-dropdown').addEventListener('change', updateCountryCode);
-
-
-  document.getElementById('editable-part').addEventListener('focus', function() {
-    window.getSelection().selectAllChildren(this);
-    window.getSelection().collapseToEnd();
-  });
-
-
-  document.getElementById('editable-part').addEventListener('keydown', function(e) {
-    if (e.key === 'Backspace' && this.innerText.length === 0) {
-      e.preventDefault();
+const inputs = document.querySelectorAll('.verification-box');
+inputs.forEach((input, index) => {
+  input.addEventListener('keyup', (e) => {
+    if (e.key >= 0 && e.key <= 9) {
+      if (index !== inputs.length - 1) {
+        // Move to next input
+        inputs[index + 1].focus();
+      }
+    } else if (e.key === 'Backspace') {
+      if (index !== 0) {
+        // Move to previous input
+        inputs[index - 1].focus();
+      }
     }
   });
+});
 </script>
+
 </body>
 </html>
+
 
 
 
