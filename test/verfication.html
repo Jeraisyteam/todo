@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verification Code Input</title>
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&family=Almarai:wght@300;400;700&display=swap');
 .verification-container {
   display: flex;
   justify-content: space-around;
@@ -69,8 +70,8 @@
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
+  /* width: 80%;
+  max-width: 600px; */
   border-radius: 16px;
   position: relative;
 }
@@ -210,7 +211,6 @@
 
 @media screen and (max-width: 480px) {
   .modal-content {
-    width: 95%;
     margin: 5% auto;
   }
 
@@ -225,6 +225,13 @@
     font-size: 20px;
   }
 }
+
+.one-line-p{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 50px;
+}
 </style>
 </head>
 <body>
@@ -237,6 +244,7 @@
       <span class="close">&times;</span>
       <div class="content"></div>
       <h2 class="box-head">رمز التحقيق</h2>
+      <p class="problem-text">الرجاء ادخال الرمز المرسل علي الرقم  966984987645 </p>
       <div class="verification-container">
 
         <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
@@ -245,14 +253,14 @@
         <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
       </div>
   
-        <button type="submit" class="btn blue">تسجيل الدخول</button>
-       
+        <button type="submit" class="btn blue">تاكيد</button>
+       <div class="one-line-p">
         <p class="problem-text">
-          
-          نواجه مشكلة في تسجيل الدخول? 
-        <span class="problem-contact">اتصل بنا</span>
+          لم يصلك الكود. 
+                  <span class="problem-contact">اعد ارسال الكود</span>
         </p>
-     
+     <span class="problem-contact">تعديل رقم الجوال</span>
+    </div>
     </div>
   
   </div>

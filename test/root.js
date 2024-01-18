@@ -36,7 +36,7 @@ static template=xml`
 
 </div>
 <div class="nav-cont-2">
-<a href="#" class="nav-link login-color" style="color: #244497 !important;">تسجيل الدخول</a>
+<a href="#" class="nav-link login-color" style="color: #244497 !important;" t-on-click="toggleModal">تسجيل الدخول</a>
 <a href="#" class="nav-link download-btn">حمل التطبيق</a>
 </div>
 </div>
@@ -1393,6 +1393,25 @@ class="intro-cont-img"/>
 }
 
 
+export class LoginModalComponent extends Component {
+    static template=xml`<div>
+
+        <div t-if="state.isModalVisible" class="modal">
+            <div class="modal-content">
+                <span t-on-click="toggleModal" class="close">&times;</span>
+                <h2 class="box-head">بدء تسجيل الدخول او التسجيل لحجز الخدمة</h2>
+                <!-- The rest of your modal content -->
+            </div>
+        </div>
+    </div>`;
+
+    state = useState({ isModalVisible: false });
+
+    toggleModal() {
+        this.state.isModalVisible = !this.state.isModalVisible;
+    }
+
+}
 
 export class ContactUs extends Component{
 static template=xml`
@@ -1634,7 +1653,7 @@ setCurrentCompenent(comp_index){
 this.currentcomponent.value = comp_index;
 }
 
-static components = {Layout,ContactUs,HomePage,VisitServices,ResidentServices,AboutUs};
+static components = {Layout,ContactUs,HomePage,VisitServices,ResidentServices,AboutUs,LoginModalComponent};
 
 }
 

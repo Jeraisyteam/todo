@@ -7,6 +7,8 @@
 <title>Login Modal</title>
 <link rel="stylesheet" href="styles.css">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&family=Almarai:wght@300;400;700&display=swap');
 .box-head {
   color: var(--primary-one, #244497);
   font-family: 'Almarai';
@@ -80,6 +82,12 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 160%;
+}
+
+
+.country-code{
+  font-family: Alexandria;
+  font-weight: 400;
 }
 
 .blue {
@@ -176,7 +184,6 @@
 
 @media screen and (max-width: 480px) {
   .modal-content {
-    width: 95%;
     margin: 5% auto;
   }
 
@@ -239,56 +246,72 @@
 
 <script>
   // Get the modal
-var modal = document.getElementById("loginModal");
+  var modal = document.getElementById("loginModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("loginBtn");
+  // Get the button that opens the modal
+  var btn = document.getElementById("loginBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-modal.style.display = "block";
-}
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-modal.style.display = "none";
-}
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = "none";
-}
-}
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 
-
-function updateCountryCode() {
+  function updateCountryCode() {
     var countryCode = document.getElementById('country-flag-dropdown').value;
     document.getElementById('dial-code').textContent = countryCode;
   }
 
-
   document.addEventListener('DOMContentLoaded', updateCountryCode);
-
 
   document.getElementById('country-flag-dropdown').addEventListener('change', updateCountryCode);
 
+  var editablePart = document.getElementById('editable-part');
 
-  document.getElementById('editable-part').addEventListener('focus', function() {
+  editablePart.addEventListener('focus', function() {
     window.getSelection().selectAllChildren(this);
     window.getSelection().collapseToEnd();
   });
 
+  // Handle the input event for numbers only and limit the length
+  editablePart.addEventListener('input', function(e) {
+    // Extract digits only from the current content
+    var digitOnlyContent = this.innerText.replace(/\D/g, '');
+    // Cut down to 10 if it's too long
+    digitOnlyContent = digitOnlyContent.substring(0, 10);
+    // Update the content if it's changed
+    if (this.innerText !== digitOnlyContent) {
+      this.innerText = digitOnlyContent;
+      // Move the caret to the end
+      window.getSelection().selectAllChildren(this);
+      window.getSelection().collapseToEnd();
+    }
+  });
 
-  document.getElementById('editable-part').addEventListener('keydown', function(e) {
-    if (e.key === 'Backspace' && this.innerText.length === 0) {
+  // Prevent non-digit input, allow navigation and deletion
+  editablePart.addEventListener('keydown', function(e) {
+    if (!e.key.match(/[0-9]/) && e.key !== 'Backspace' && e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' && e.key !== 'Delete' && e.key !== 'Tab') {
       e.preventDefault();
     }
   });
+
 </script>
+
+
 </body>
 </html>
 
