@@ -1,48 +1,54 @@
-const{Component, loadFile, mount,xml,useState}= owl;
+const { Component, xml, useState } = owl;
 
-export class Header extends Component{
-static Props = {setCurrentCompenent:Function};
-state = useState({ activeComponent: 1 });
+export class Header extends Component {
+    static Props = { setCurrentCompenent: Function };
+    state = useState({ activeComponent: 1, isModalVisible: false });
 
-setCurrentComponentAndActive(componentNumber) {
-    this.props.setCurrentCompenent(componentNumber);
-    this.state.activeCompenent = componentNumber;
+    setCurrentComponentAndActive(componentNumber) {
+        this.props.setCurrentCompenent(componentNumber);
+        this.state.activeComponent = componentNumber;
+    }
+
+    toggleModal() {
+        this.state.isModalVisible = !this.state.isModalVisible;
+    }
+
+    static template = xml`
+        <header class="main-head">
+            <div class="logo navbar-brand">
+                <img src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt=""/>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+                        <path d="M1.00058 10.5H17.5M1 5.75H17.5M1 1H17.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav mr-auto nav-cont-1">
+                        <a class="nav-link" href="#">     
+                            <img class="hidden-image" src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="" width="76px" height="53px"/>
+                        </a>
+                        <a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(1)" t-att-class="{ 'active': state.activeComponent === 1 }">الرئيسية</a>
+                        <a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(5)" t-att-class="{ 'active': state.activeComponent === 5 }">عن نجدة</a>
+                        <a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(4)" t-att-class="{ 'active': state.activeComponent === 4 }">خدمات المقيمة</a>
+                        <a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(3)" t-att-class="{ 'active': state.activeComponent === 3 }">خدمات الزيارة</a>
+                        <a class="nav-link">برنامج الولاء</a>
+                        <a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(2)" t-att-class="{ 'active': state.activeComponent === 2 }">اتصل بنا</a>
+                    </div>
+                    <div class="nav-cont-2">
+                    <a href="#" class="nav-link login-color" t-on-click="toggleModal">تسجيل الدخول</a>
+                        <a href="#" class="nav-link download-btn">حمل التطبيق</a>
+                    </div>
+                </div>
+            </nav>
+
+          
+        </header>
+    `;
 }
 
-static template=xml`
-
-<header class="main-head">
-<div class="logo navbar-brand">
-<img src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt=""/>
-</div>
-
-<nav class="navbar navbar-expand-lg navbar-light" >
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-<svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
-<path d="M1.00058 10.5H17.5M1 5.75H17.5M1 1H17.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<div class="navbar-nav mr-auto nav-cont-1">
-<a class="nav-link" href="#">     
-<img class="hidden-image" src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="" width="76px" height="53px"/></a>
-<a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(1)" t-att-class="{ 'active': state.activeCompenent === 1 }">الرئيسية</a>
-
-<a class="nav-link"  t-on-click="()=>this.setCurrentComponentAndActive(5)"  t-att-class="{ 'active': state.activeCompenent === 5 }">عن نجدة</a>
-<a class="nav-link" t-on-click="()=>this.setCurrentComponentAndActive(4)"  t-att-class="{ 'active': state.activeCompenent === 4 }">خدمات المقيمة</a>
-<a class="nav-link"  t-on-click="()=>this.setCurrentComponentAndActive(3)"   t-att-class="{ 'active': state.activeCompenent === 3 }">خدمات الزيارة</a>
-<a class="nav-link">برنامج الولاء</a>
-<a class="nav-link"  t-on-click="()=>this.setCurrentComponentAndActive(2)"   t-att-class="{ 'active': state.activeCompenent === 2 }">اتصل بنا</a>
-
-</div>
-<div class="nav-cont-2">
-<a href="#" class="nav-link login-color" style="color: #244497 !important;" t-on-click="toggleModal">تسجيل الدخول</a>
-<a href="#" class="nav-link download-btn">حمل التطبيق</a>
-</div>
-</div>
-</nav>
-</header>`
-}
 export class Footer  extends Component{
 static template = xml`    <footer class="footer">
 
@@ -1393,25 +1399,83 @@ class="intro-cont-img"/>
 }
 
 
+
 export class LoginModalComponent extends Component {
-    static template=xml`<div>
+    state = useState({
+        isModalVisible: false,
+        countryCode: "+966",
+        phoneNumber: "",
+    });
 
-        <div t-if="state.isModalVisible" class="modal">
-            <div class="modal-content">
-                <span t-on-click="toggleModal" class="close">&times;</span>
-                <h2 class="box-head">بدء تسجيل الدخول او التسجيل لحجز الخدمة</h2>
-                <!-- The rest of your modal content -->
-            </div>
-        </div>
-    </div>`;
+    showLoginModal() {
+        this.state.isModalVisible = true;
+    }
+    showLoginModal() {
+        this.state.isModalVisible = true;
+        console.log("Showing modal:", this.state.isModalVisible);
+    }
+    
+    hideLoginModal(event) {
+        if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
+            this.state.isModalVisible = false;
+            console.log("Hiding modal:", this.state.isModalVisible);
+        }
+    }
+    
 
-    state = useState({ isModalVisible: false });
-
-    toggleModal() {
-        this.state.isModalVisible = !this.state.isModalVisible;
+    hideLoginModal(event) {
+        if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
+            this.state.isModalVisible = false;
+        }
     }
 
+    updateCountryCode(event) {
+        this.state.countryCode = event.target.value;
+    }
+
+    onPhoneNumberInput(event) {
+        const digitOnlyContent = event.target.innerText.replace(/\D/g, '').substring(0, 10);
+        if (event.target.innerText !== digitOnlyContent) {
+            event.target.innerText = digitOnlyContent;
+            window.getSelection().selectAllChildren(event.target);
+            window.getSelection().collapseToEnd();
+        }
+    }
+
+    onPhoneNumberKeyDown(event) {
+        if (!event.key.match(/[0-9]/) && !['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)) {
+            event.preventDefault();
+        }
+    }
+
+    static template = xml`
+        <div>
+            <!-- Trigger Button for Modal -->
+            <button t-on-click="showLoginModal">Open Login Modal</button>
+
+            <!-- Login Modal -->
+            <div t-if="state.isModalVisible" class="modal" t-on-click="hideLoginModal" style="display: block; position: fixed; z-index: 100; background-color: white;">
+                <div class="modal-content">
+                    <span class="close" t-on-click="hideLoginModal">×</span>
+                    <h2 class="box-head">Login to Your Account</h2>
+
+                    <!-- Country Code Dropdown -->
+                    <select class="country-code-dropdown" t-model="state.countryCode" t-on-change="updateCountryCode">
+                        <option value="+1">🇺🇸</option>
+                        <option value="+91">🇮🇳</option>
+                        <option value="+966" selected="selected">SA</option>
+                    </select>
+
+                    <!-- Editable Phone Number Part -->
+                    <div contenteditable="true" class="phone-number-input" t-on-input="onPhoneNumberInput" t-on-keydown="onPhoneNumberKeyDown">
+                        {{ state.phoneNumber }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
 }
+
 
 export class ContactUs extends Component{
 static template=xml`
@@ -1653,7 +1717,7 @@ setCurrentCompenent(comp_index){
 this.currentcomponent.value = comp_index;
 }
 
-static components = {Layout,ContactUs,HomePage,VisitServices,ResidentServices,AboutUs,LoginModalComponent};
+static components = {Layout,ContactUs,HomePage,VisitServices,ResidentServices,AboutUs,};
 
 }
 
