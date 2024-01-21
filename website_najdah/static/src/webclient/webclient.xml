@@ -2,7 +2,11 @@
 <templates xml:space="preserve">
 
     <t t-name="website_najdah.WebClient">
-        <h1>Najdah Website</h1>
+        <Layout setCurrentCompenent.bind="setCurrentCompenent">
+            <t t-component="comps[currentcomponent.value]"/>
+            </Layout>
+            <script src="website_najdah/static/src/webclient/script.js"></script>
+            
     </t>
 
 </templates>
