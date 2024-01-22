@@ -36,12 +36,108 @@
       .inputs-map-cont{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center !important;
+        	gap: 26px;
       }
 
       .all-inp{
         display: flex;
         flex-direction: column;
+        gap: 26px;
+      }
+
+      .all-inp input::placeholder{
+        padding: 20px 3px;
+        color: #666;
+      }
+      .all-inp input{
+        text-align: right;
+        border: none;
+        height: 56px !important;
+        color: white;
+        background-color: #dcdcdc;
+        width: 300px;
+        text-align: right;
+        font-family: Almarai;
+        font-size: 14px;
+        padding: 0px 5px;
+        font-style: normal;
+        font-weight: 600;
+        border-radius:3px ;
+        line-height: 160%; /* 25.6px */
+      }
+      .map-cont{
+        position: relative;
+      }
+      .get-location{
+        position: absolute;
+        top: 30;
+        left: 30;
+        right: 30;
+        padding: 10px 0;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        background: var(--primary-two, #F06030);
+      }
+
+      .all-location-contents{
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        padding: 100px;
+        align-items: center;
+        justify-content: center;
+  
+      }
+
+      .add-address{
+        border-radius: 5px;
+        background: var(--primary-one, #244497);
+        color: white;
+        border: none;
+        padding: 10px 45px;
+      }
+
+      @media (max-width:1000px) {
+        .inputs-map-cont{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .all-inp{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .all-inp input{
+          width: 100vw;
+          max-width: 80%;
+        }
+        .map-cont{
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+
+        .map-cont iframe{
+          width: 100vw;
+          max-width: 80%;
+          border: 1px solid;
+        }
+
+        .get-location{
+          width: 100vw;
+          max-width: 60%;
+          margin-bottom: 20px;
+          position: unset !important;
+        }
+     
+      }
+      @media (max-width:500px){
+        .guide-p{
+          width: 240px;
+        }
       }
     </style>
   
@@ -77,7 +173,7 @@
 </nav>
 </header>
 
- 
+ <div class="all-location-contents">
 <div class="header-p-h">
 
   <h1 class="dt-header">التوصيل الي </h1>
@@ -87,7 +183,7 @@
 <div class="inputs-map-cont">
   <div class="map-cont" id="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2503345.0294716563!2d5.27937025!3d52.21299185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snl!4v1705838949379!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <button onclick="getUserLocation()">Get My Location</button>
+    <button class="get-location" onclick="getUserLocation()">تحديد الموقع علي الخريطه</button>
   </div>
 
 
@@ -97,11 +193,12 @@
       <input type="text" placeholder="الحي">
       <input type="text" placeholder="المدينة">
       <input type="text" placeholder="الرمز البريدي">
-      <button>أضف عنوان جديد</button>
+      <button class="add-address">أضف عنوان جديد</button>
     </div>
   
 
 
+</div>
 </div>
 <footer class="footer">
             
