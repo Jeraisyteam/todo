@@ -6,6 +6,15 @@ import { useBus, useService } from "@web/core/utils/hooks";
 
 import { Component, useState,xml } from "@odoo/owl";
 export class Header extends Component {
+
+
+    static props = ['showLoginModal'];
+
+    constructor() {
+        super(...arguments);
+        console.log('showLoginModal prop:', this.props.showLoginModal);
+    }
+    
     static Props = { setCurrentCompenent: Function };
     state = useState({ activeComponent: 1, isModalVisible: false });
 
@@ -1307,7 +1316,6 @@ class="intro-cont-img"/>
 }
 
 
-
 export class LoginModalComponent extends Component {
     state = useState({
         isModalVisible: false,
@@ -1315,32 +1323,26 @@ export class LoginModalComponent extends Component {
         phoneNumber: "",
     });
 
-    showLoginModal() {
-        this.state.isModalVisible = true;
-    }
+    // Method to show the login modal
     showLoginModal() {
         this.state.isModalVisible = true;
         console.log("Showing modal:", this.state.isModalVisible);
     }
-    
+
+    // Method to hide the login modal
     hideLoginModal(event) {
         if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
             this.state.isModalVisible = false;
             console.log("Hiding modal:", this.state.isModalVisible);
         }
     }
-    
 
-    hideLoginModal(event) {
-        if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
-            this.state.isModalVisible = false;
-        }
-    }
-
+    // Method to update the country code based on user selection
     updateCountryCode(event) {
         this.state.countryCode = event.target.value;
     }
 
+    // Method to ensure only digits are entered in the phone number input
     onPhoneNumberInput(event) {
         const digitOnlyContent = event.target.innerText.replace(/\D/g, '').substring(0, 10);
         if (event.target.innerText !== digitOnlyContent) {
@@ -1350,12 +1352,14 @@ export class LoginModalComponent extends Component {
         }
     }
 
+    // Method to prevent non-numeric keys in the phone number input
     onPhoneNumberKeyDown(event) {
         if (!event.key.match(/[0-9]/) && !['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(event.key)) {
             event.preventDefault();
         }
     }
 
+    // XML template for the component
     static template = xml`
         <div>
             <!-- Trigger Button for Modal -->

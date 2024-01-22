@@ -5,16 +5,28 @@ import { localization } from "@web/core/l10n/localization";
 import { useBus, useService } from "@web/core/utils/hooks";
 
 import { Component, onMounted, onWillStart, useExternalListener, useState } from "@odoo/owl";
-import {Layout,HomePage,ContactUs,VisitServices,ResidentServices,AboutUs } from "./components/components";
+import { Layout, HomePage, ContactUs, VisitServices, ResidentServices, AboutUs, LoginModalComponent } from "./components/components";
+
 
 export class WebClient extends Component {
-    
+    state = useState({
+ 
+        isLoginModalVisible: false
+    });
+
+    showLoginModal() {
+        this.state.isLoginModalVisible = true;
+    }
+
+    hideLoginModal() {
+        this.state.isLoginModalVisible = false;
+    }
 comps = {1:HomePage, 2:ContactUs, 3:VisitServices, 4:ResidentServices,5:AboutUs};
 currentcomponent = useState({ value:1 });
 setCurrentCompenent(comp_index){
 this.currentcomponent.value = comp_index;
 }
-
+static components = { Layout, HomePage, ContactUs, VisitServices, ResidentServices, AboutUs, LoginModalComponent };
     async setup() {
         this.title = useService("title");
         this.router = useService("router");
