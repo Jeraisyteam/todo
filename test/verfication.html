@@ -7,13 +7,13 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&family=Almarai:wght@300;400;700&display=swap');
-.verification-container {
+.new-verification-container {
   display: flex;
   justify-content: space-around;
   padding: 20px;
 }
 
-.verification-box {
+.new-verification-box {
   width: 40px; 
   height: 40px;
   margin: 0 10px; 
@@ -24,17 +24,17 @@
 }
 
 
-.verification-box:focus {
+.new-verification-box:focus {
   outline: none;
   border-color: var(--primary-one, #244497);
 }
 
 /* Media query for responsiveness */
 @media screen and (max-width: 480px) {
-  .verification-container {
+  .new-verification-container {
     padding: 10px;
   }
-  .verification-box {
+  .new-verification-box {
     width: 10vw; /* Responsive width */
     height: 10vw; /* Responsive height */
     margin: 0 3vw; /* Responsive spacing */
@@ -42,14 +42,14 @@
 }
 
 
-.box-head {
+.new-box-head {
   color: var(--primary-one, #244497);
   font-family: 'Almarai';
   font-size: 24px;
   font-weight: 700;
 }
 
-.modal {
+.new-modal {
   display: none; 
   position: fixed; 
   z-index: 1; 
@@ -61,7 +61,7 @@
   background-color: rgba(0,0,0,0.6); 
 }
 
-.modal-content {
+.new-modal-content {
   display: flex;
   flex-direction: column;
   background-color: #fefefe;
@@ -76,7 +76,7 @@
   position: relative;
 }
 
-.close {
+.new-close {
   color: #aaa;
   left:10px;
   font-size: 28px;
@@ -85,21 +85,21 @@
   top: 0;
 }
 
-.close:hover,
-.close:focus {
+.new-close:hover,
+.new-close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-.btn {
+.new-btn {
   padding: 10px;
   margin: 10px;
   border: none;
   cursor: pointer;
 }
 
-.blue, .orange {
+.new-blue, .new-orange {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,32 +114,31 @@
   font-family: Almarai;
   font-size: 18px;
   font-weight: 700;
-  line-height: 160%;
 }
 
-.blue {
+.new-blue {
   background: var(--primary-one, #244497);
 }
 
-.orange {
+.new-orange {
   background-color: white;
   border: 1px solid var(--primary-two, #F06030);
   color: var(--primary-two, #F06030);
 }
 
-#loginModal {
+#new-loginModal {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.elements {
+.new-elements {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.phone-input-container {
+.new-phone-input-container {
   position: relative;
   display: flex;
   border-radius: 4px;
@@ -154,7 +153,7 @@
   justify-content: space-between;
 }
 
-.flag-dropdown {
+.new-flag-dropdown {
   flex-grow: 0;
   border: none;
   background: transparent;
@@ -163,7 +162,7 @@
   z-index: 10;
 }
 
-.phone-input {
+.new-phone-input {
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -172,70 +171,69 @@
   padding-right: 5px;
 }
 
-.vertical-line {
+.new-vertical-line {
   height: 24px;
   border-left: 1px solid grey;
   margin-right: 5px;
 }
 
-.country-code {
+.new-country-code {
   color: grey;
   margin-right: 5px;
 }
 
-.editable-part {
+.new-editable-part {
   text-align: left;
   flex-grow: 1;
   border: none;
   outline: none;
 }
 
-.problem-text,
-.problem-contact,
-.label-phone,
-.label-input label {
+.new-problem-text,
+.new-problem-contact,
+.new-label-phone,
+.new-label-input label {
   color: var(--text, #5E718D);
   font-family: Alexandria;
   font-size: 14px;
   font-weight: 400;
 }
-.label-input label{
+.new-label-input label{
   text-align: right ;
 }
-.label-input{
+.new-label-input{
   text-align: right;
 }
-.problem-contact {
+.new-problem-contact {
   color: var(--primary-two, #F06030);
 }
 
 @media screen and (max-width: 480px) {
-  .modal-content {
+  .new-modal-content {
     margin: 5% auto;
   }
 
-  .blue, .orange {
+  .new-blue, .new-orange {
     width: 95%;
   }
-  .phone-input-container{
+  .new-phone-input-container{
     width: 77vw;
-
   }
-  .box-head {
+  .new-box-head {
     font-size: 20px;
   }
 
-  .problem-text{
+  .new-problem-text{
     width: 230px;
     font-size: 13px !important;
   }
 
-  .problem-text span{ 
+  .new-problem-text span{ 
     font-size: 10px;
   }
 }
 
-.one-line-p{
+.new-one-line-p{
   display: flex;
   align-items:center;
   justify-content: space-between;
@@ -246,52 +244,48 @@
 <body>
 
 
-  <div id="loginModal" class="modal">
+  <div id="new-loginModal" class="new-modal">
 
     <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="content"></div>
-      <h2 class="box-head">رمز التحقيق</h2>
-      <p class="problem-text">الرجاء ادخال الرمز المرسل علي الرقم  966984987645 </p>
-      <div class="verification-container">
+    <div class="new-modal-content">
+      <span class="new-close">&times;</span>
+      <div class="new-content"></div>
+      <h2 class="new-box-head">رمز التحقيق</h2>
+      <p class="new-problem-text">الرجاء ادخال الرمز المرسل علي الرقم  966984987645 </p>
+      <div class="new-verification-container">
 
-        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
-        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
-        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
-        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
       </div>
   
-        <button type="submit" class="btn blue">تاكيد</button>
-       <div class="one-line-p">
-        <p class="problem-text">
+        <button type="submit" class="new-btn new-blue">تاكيد</button>
+       <div class="new-one-line-p">
+        <p class="new-problem-text">
           لم يصلك الكود. 
-                  <span class="problem-contact">اعد ارسال الكود</span>
+                  <span class="new-problem-contact">اعد ارسال الكود</span>
         </p>
-     <span class="problem-contact">تعديل رقم الجوال</span>
+     <span class="new-problem-contact">تعديل رقم الجوال</span>
     </div>
     </div>
   
   </div>
-  
-
-
-
 
 <script>
 
-const inputs = document.querySelectorAll('.verification-box');
-inputs.forEach((input, index) => {
-  input.addEventListener('keyup', (e) => {
+const newInputs = document.querySelectorAll('.new-verification-box');
+newInputs.forEach((newInput, index) => {
+  newInput.addEventListener('keyup', (e) => {
     if (e.key >= 0 && e.key <= 9) {
-      if (index !== inputs.length - 1) {
+      if (index !== newInputs.length - 1) {
         // Move to next input
-        inputs[index + 1].focus();
+        newInputs[index + 1].focus();
       }
     } else if (e.key === 'Backspace') {
       if (index !== 0) {
         // Move to previous input
-        inputs[index - 1].focus();
+        newInputs[index - 1].focus();
       }
     }
   });
@@ -300,15 +294,3 @@ inputs.forEach((input, index) => {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

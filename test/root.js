@@ -38,7 +38,7 @@ export class Header extends Component {
                         <a class="nav-link" t-on-click="() => this.setCurrentComponentAndActive(2)" t-att-class="{ 'active': state.activeComponent === 2 }">اتصل بنا</a>
                     </div>
                     <div class="nav-cont-2">
-                    <a href="#" class="nav-link login-color" t-on-click="toggleModal">تسجيل الدخول</a>
+                    <a href="#" class="nav-link login-color"  id="yourButtonId">تسجيل الدخول</a>
                         <a href="#" class="nav-link download-btn">حمل التطبيق</a>
                     </div>
                 </div>

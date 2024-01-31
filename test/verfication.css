@@ -1,14 +1,41 @@
-<!-- This is your main HTML file -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Modal</title>
-<link rel="stylesheet" href="styles.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&family=Almarai:wght@300;400;700&display=swap');
+.verification-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.verification-box {
+  width: 40px; 
+  height: 40px;
+  margin: 0 10px; 
+  border: 1px solid var(--primary-two, #F06030);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px; 
+}
+
+
+.verification-box:focus {
+  outline: none;
+  border-color: var(--primary-one, #244497);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 480px) {
+  .verification-container {
+    padding: 10px;
+  }
+  .verification-box {
+    width: 10vw; /* Responsive width */
+    height: 10vw; /* Responsive height */
+    margin: 0 3vw; /* Responsive spacing */
+  }
+}
+
+
 .box-head {
   color: var(--primary-one, #244497);
   font-family: 'Almarai';
@@ -38,7 +65,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px;
+  max-width: 400px;
   border-radius: 16px;
   position: relative;
 }
@@ -82,12 +109,6 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 160%;
-}
-
-
-.country-code{
-  font-family: Alexandria;
-  font-weight: 400;
 }
 
 .blue {
@@ -195,68 +216,23 @@
 
   }
   .box-head {
-    text-align: center;
     font-size: 20px;
+  }
+
+  .problem-text{
+    width: 230px;
+    font-size: 13px !important;
+  }
+
+  .problem-text span{ 
+    font-size: 10px;
   }
 }
 
+.one-line-p{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 50px;
+}
 </style>
-</head>
-<body>
-
-<!-- Login Button that triggers the modal -->
-<button id="loginBtn">تسجيل الدخول</button>
-
-<!-- The Modal -->
-<div id="loginModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">x</span>
-    <div class="content"></div>
-    <h2 class="box-head">بدء تسجيل الدخول او التسجيل لحجز الخدمة</h2>
-    <div class="label-input">
-      <label for="phone" class="label-phone">رقم الهاتف</label>
-      <div class="phone-input-container">
-        <select class="flag-dropdown" id="country-flag-dropdown" onchange="updateCountryCode()">
-          <option value="+1" data-country-code="US">🇺🇸</option>  
-          <option value="+91" data-country-code="IN">🇮🇳</option>
-          <option value="+966" data-country-code="SA" selected>SA</option> 
-        </select>
-        
-        
-        <div class="vertical-line"></div>
-        <span class="
-      country-code" id="dial-code">+966</span>
-      
-        <div class="editable-part" contenteditable="true" id="editable-part"></div>
-      </div>
-        </div>
-
-      <button type="submit" class="btn blue">تسجيل الدخول</button>
-      <button type="button" class="btn orange">تسجيل الدخول كزائر</button>
-      <p class="problem-text">
-        
-        نواجه مشكلة في تسجيل الدخول? 
-      <span class="problem-contact">اتصل بنا</span>
-      </p>
-   
-  </div>
-
-</div>
-
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
