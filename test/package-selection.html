@@ -1,0 +1,760 @@
+<html lang="en">
+  <head>
+    <script src="https://use.fortawesome.com/1ce05b4b.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png">
+    <title>Services</title>
+    
+    <style>
+
+
+
+      .first-box{
+        display: flex;
+        width: 593px;
+        padding: 16px 8px;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--text, #5E718D);
+        background: #F9F9FA;
+      }
+
+      .the-address-main{
+        color: var(--text, #5E718D);
+        font-family: Almarai;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 25.2px */
+        text-align: right;
+      }
+
+      .address-text-main h1{
+        color: var(--text, #5E718D);
+          font-family: "Public Sans";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+      }
+
+      .address-text-main p{
+        width: 300px;
+        color: var(--text, #5E718D);
+        font-family: "Public Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+      }
+
+      .nationalty{
+        color: var(--text, #5E718D);
+        font-family: Almarai;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 25.2px */
+        text-align: right;
+      }
+
+      .every-pc{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 30vh;
+      }
+
+
+      .total-cont{
+        width: 593px;
+        border: 1px solid #5E718D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      .step-1{
+        color: var(--primary-one, #244497);
+        /* Paragraph 1 */
+        font-family: Almarai;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 33.6px */
+        text-align: right;
+      }
+
+      .step-desc{
+        color: var(--text, #5E718D);
+        font-family: Almarai;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 25.6px */
+        text-align: right;
+      }
+
+      .space-text{
+        color: var(--primary-one, #244497);
+        font-family: Almarai;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700; 
+        line-height: 140%; /* 33.6px */
+      }
+      .text-m{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0px 10px;
+        margin-top: auto;
+        width: 100%;
+      }
+      .total-h{
+        margin-top: 10px;
+        color: var(--primary-one, #244497);
+        font-family: Almarai;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 28px */
+      }
+
+      .h-flags{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+      .all-3-conten{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 25px;
+      }
+      .flag-cont{
+        display: flex;
+        flex-direction: row-reverse;
+        /* justify-content: space-around;
+        align-items: flex-start; */
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .flag-box{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        /* justify-content: space-between; */
+        border: 1px solid #5E718D;
+        border-radius: 8px;
+        padding: 8px 15px;
+      }
+
+      .text-m p{
+        color: var(--primary-two, #F06030);
+        font-family: "Public Sans";
+        font-size: 20px; 
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .space-text{
+        margin-bottom:28px;
+      }
+
+      @media (max-width:700px) {
+        .every-pc{
+          display: none;
+        }
+        .phone-flag-box{
+          display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        border: 1px solid #5E718D;
+        border-radius: 8px;
+        }
+
+        .phone-first-step{
+          padding: 10px 8px;
+          border-radius: 6px;
+          border: 1px solid rgba(94, 113, 141, 0.20);
+          background: #FBFBFB;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          gap: 30px;
+        }
+        .right-f-s{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .phone-second-step{
+           display: grid;
+           border-radius: 6px;
+           border: 1px solid rgba(94, 113, 141, 0.20);
+           background: #FBFBFB;           
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           gap: 30px;
+           padding: 10px;
+          padding-bottom: 40px;
+
+        }
+
+
+        .line-f-b{
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: right;
+          align-items: center;
+          padding: 12px 8px;
+        }
+        .f-s-s{
+          color: var(--text, #5E718D);
+          font-family: Almarai;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 160%; /* 25.6px */
+        }
+        .f-f-p{
+          color: var(--primary-one, #244497);
+          font-family: Almarai;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 160%;
+        }
+        .p-f-s-g{
+          color: var(--text, #5E718D);
+          text-align: right;
+          font-family: Almarai;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; 
+        }
+
+        .f-s-p{
+          color: var(--primary-one, #244497);
+          text-align: center;
+          font-family: Almarai;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .f-s-b{
+          text-align: right !important;
+        }
+        
+        .phone-flag-box{
+          border-radius: 8px;
+          border: 1px solid var(--text, #5E718D);
+          padding: 4px 8px;
+        }
+        
+        .phone-flag-box h1{
+          margin-right: 12px;
+        }
+      }
+
+      .more-det{
+        display: none;
+      }
+
+      @media (min-width:701px){
+        .every-phone{
+          display: none;
+        }
+      }
+      @media (min-width:1500px){
+        .more-det{
+          display: unset;
+        }
+      }
+
+      .pk-nav{
+        display: flex;
+        width: 750px;
+        justify-content: space-between;
+        flex-direction:row-reverse ;
+        align-items: right;
+      }
+   
+      .pak-a{
+        font-family: Almarai;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #5E718D;
+        text-decoration: none !important;
+        /* background: #244497; */
+
+      }
+      .shfts{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:center;
+        width: 672px;
+        gap: 20px;
+        border: 1px solid;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding:8px 16px 8px 16px;
+        border-radius: 8px;
+      }
+      .m-p,.nm-shft{
+        padding:0px;
+        margin: 0px;
+        text-align: center;
+      }  
+      .m-p{
+        color: #5E718D;
+        font-family: Almarai;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+
+      }
+
+      .nm-shft{
+        font-family: Almarai;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #5E718D;
+
+      }
+      .days-cont{
+        display: flex;
+        gap: 20px;
+        flex-direction: row-reverse;
+      }
+
+      .days{
+        border: 1px solid #5E718D;
+        padding:8px 24px 8px 24px;
+        border-radius: 4px;
+        color:#5E718D;
+        font-family: 'Almarai';
+      }
+
+      .morning-cont,.night-cont{
+        display: flex;
+        flex-direction: column;
+        align-items:end!important;
+        text-align: right;
+      }
+  
+      .all-pk-cont{
+   
+      }
+      .hidden{
+        display: none !important;
+      }
+    </style>
+    
+    
+
+  </head>
+<body
+><div class="all">
+  <header class="main-head">
+    <div class="logo navbar-brand">
+        <img src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="">
+</div>
+<nav class="navbar navbar-expand-lg navbar-light" >
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
+      <path d="M1.00058 10.5H17.5M1 5.75H17.5M1 1H17.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav mr-auto nav-cont-1">
+          <a class="nav-link" href="#">     
+            <img class="hidden-image" src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="" width="76px" height="53px"></a>
+          <a class="nav-link" href="index.html" class="main-h-nav">الرئيسية</a>
+          <a class="nav-link" href="about-us.html">عن نجدة</a>
+          <a class="nav-link active" href="resident-services.html">خدمات المقيمة</a>
+          <a class="nav-link" href="visit-services.html">خدمات الزيارة</a>
+          <a class="nav-link" href="#">برنامج الولاء</a>
+          <a class="nav-link" href="contact.html">اتصل بنا</a>
+      </div>
+      <div class="nav-cont-2">
+          <a href="#" class="nav-link login-color" style="color: #244497 !important;">تسجيل الدخول</a>
+          <a href="#" class="nav-link download-btn">حمل التطبيق</a>
+      </div>
+  </div>
+</nav>
+</header>
+
+
+
+<div class="every-pc">
+<div class="all-3-conten">
+  <div class="text-c">
+    <h1 class="step-1">الخطوة الاولي : نوع الخدمه عاملة منزلية</h1>
+    <h3 class="step-desc">عاملات مدربات باحترافيه عاليه تحت اشراف أكاديمية نجدة</h3>
+  </div>
+  <div class="h-flags">
+    <h1 class="space-text">الخطوة الثانية : حدد الجنسيات المفضلة</h1>
+    <h1 class="space-text">الخطوة الثالثة  :  حدد تاريخ بداية الخدمة</h1>
+    <h1 class="space-text">الخطوة الرابعة: قائمة الباقات</h1>
+
+
+    <div class="pk-nav">
+    
+      <a href="#" class="pak-a" onclick="showContent('morning')">زيارة فردية</a>
+      <a href="#" class="pak-a"  onclick="showContent('month')">باقة شهر</a>
+      <a href="#" class="pak-a" onclick="showContent('two-months')">باقة شهرين</a>
+      <a href="#" class="pak-a" onclick="showContent('another-two-months')">باقة شهرين</a>    
+    </div>
+
+      <div class="all-pk-cont ">
+          <div class="pack-cont">
+        <div class="morning-cont" id="morning">
+        <div class="morning-sft shfts">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 33.25C28.2132 33.25 33.25 28.2132 33.25 22C33.25 15.7868 28.2132 10.75 22 10.75C15.7868 10.75 10.75 15.7868 10.75 22C10.75 28.2132 15.7868 33.25 22 33.25Z" fill="#FCD227"/>
+            <path d="M22 39.25V43M34.1976 34.1976L36.8492 36.8492M9.80241 34.1976L7.15076 36.8492M39.25 22H43M4.75 22H1M34.1976 9.80241L36.8492 7.15076M9.80241 9.80241L7.15076 7.15076M22 4.75V1M33.25 22C33.25 28.2132 28.2132 33.25 22 33.25C15.7868 33.25 10.75 28.2132 10.75 22C10.75 15.7868 15.7868 10.75 22 10.75C28.2132 10.75 33.25 15.7868 33.25 22Z" stroke="#FCD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="m-p">زيارة فردية</p>
+            <h2 class="nm-shft">شفت صباحي</h2>
+        </div>
+        <div class="morning-elements hidden">
+          <p class="package-type">
+
+            <span class="orange-color">
+              
+             زيارة فردية 
+            </span> : 
+            باقة زيارة فردية اندونسيا. سعر الباقه يبدا من ٩٩ ريال
+          </p>
+
+          <p class="text-width">نافذة الوصول للفترة الصباحبة من الساعة ٨ صباحا حتي الساعة ١٠ صباحا وتستمر الخدمة لمدة ٤ ساعات من وصول العاملة</p>
+
+          <p class="sft-p">زيارة واحدة  وعدد ١ عاملة منزلية</p>
+          <p class="sft-p">مدة انتظار السائق ٥ دقائق عند الوصول </p>
+          <p class="sft-p">
+            
+          : أختر اليوم المناسب للزيارة
+        </p>
+        <div class="days-cont">
+        <div class="days">السبت</div>
+        <div class="days">الاحد</div>
+        <div class="days">الاثنين</div>
+        <div class="days">الثلاثاء</div>
+        <div class="days">الاربعاء</div>
+        <div class="days">الخميس</div>
+      </div>
+        </div>
+      </div>
+
+      <div class="night-cont">
+        <div class="night-sft shfts" >
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M34.6242 22.6209C31.6797 23.4391 28.5707 23.4607 25.6151 22.6833C22.6595 21.906 19.9634 20.3577 17.8024 18.1967C15.6415 16.0358 14.0931 13.3397 13.3158 10.3841C12.5385 7.42851 12.56 4.31952 13.3782 1.375L13.3787 1.37515C10.4744 2.18308 7.83257 3.73787 5.71627 5.88465C3.59997 8.03143 2.0831 10.6953 1.31677 13.6107C0.550442 16.5262 0.561406 19.5917 1.34857 22.5016C2.13573 25.4115 3.67162 28.0644 5.80322 30.196C7.93483 32.3276 10.5877 33.8635 13.4977 34.6506C16.4076 35.4377 19.473 35.4487 22.3885 34.6823C25.304 33.916 27.9678 32.3991 30.1146 30.2827C32.2614 28.1664 33.8161 25.5245 34.624 22.6203L34.6242 22.6209Z" fill="#2B4382" stroke="#2B4382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            <p class="m-p">زيارة فردية</p>
+            <h2 class="nm-shft">شفت صباحي</h2>
+        </div>
+        <div class="night-elements hidden">
+          <p class="package-type">
+
+            <span class="orange-color">
+              
+             زيارة فردية 
+            </span> : 
+            باقة زيارة فردية اندونسيا. سعر الباقه يبدا من ٩٩ ريال
+          </p>
+
+          <p class="text-width">نافذة الوصول للفترة الصباحبة من الساعة ٨ صباحا حتي الساعة ١٠ صباحا وتستمر الخدمة لمدة ٤ ساعات من وصول العاملة</p>
+
+          <p class="sft-p">زيارة واحدة  وعدد ١ عاملة منزلية</p>
+          <p class="sft-p">مدة انتظار السائق ٥ دقائق عند الوصول </p>
+          <p class="sft-p">
+            
+          : أختر اليوم المناسب للزيارة
+        </p>
+        <div class="days-cont">
+        <div class="days">السبت</div>
+        <div class="days">الاحد</div>
+        <div class="days">الاثنين</div>
+        <div class="days">الثلاثاء</div>
+        <div class="days">الاربعاء</div>
+        <div class="days">الخميس</div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+      <div id="month" class="all-pk-cont">
+        <div class="morning-cont" id="">
+          <div class="morning-sft shfts">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 33.25C28.2132 33.25 33.25 28.2132 33.25 22C33.25 15.7868 28.2132 10.75 22 10.75C15.7868 10.75 10.75 15.7868 10.75 22C10.75 28.2132 15.7868 33.25 22 33.25Z" fill="#FCD227"/>
+              <path d="M22 39.25V43M34.1976 34.1976L36.8492 36.8492M9.80241 34.1976L7.15076 36.8492M39.25 22H43M4.75 22H1M34.1976 9.80241L36.8492 7.15076M9.80241 9.80241L7.15076 7.15076M22 4.75V1M33.25 22C33.25 28.2132 28.2132 33.25 22 33.25C15.7868 33.25 10.75 28.2132 10.75 22C10.75 15.7868 15.7868 10.75 22 10.75C28.2132 10.75 33.25 15.7868 33.25 22Z" stroke="#FCD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="m-p">زيارة فردية</p>
+              <h2 class="nm-shft">شفت صباحي</h2>
+          </div>
+          <div class="morning-elements hidden">
+            <p class="package-type">
+  
+              <span class="orange-color">
+                
+               زيارة فردية 
+              </span> : 
+              باقة زيارة فردية اندونسيا. سعر الباقه يبدا من ٩٩ ريال
+            </p>
+  
+            <p class="text-width">نافذة الوصول للفترة الصباحبة من الساعة ٨ صباحا حتي الساعة ١٠ صباحا وتستمر الخدمة لمدة ٤ ساعات من وصول العاملة</p>
+  
+            <p class="sft-p">زيارة واحدة  وعدد ١ عاملة منزلية</p>
+            <p class="sft-p">مدة انتظار السائق ٥ دقائق عند الوصول </p>
+            <p class="sft-p">
+              
+            : أختر اليوم المناسب للزيارة
+          </p>
+          <div class="days-cont">
+          <div class="days">السبت</div>
+          <div class="days">الاحد</div>
+          <div class="days">الاثنين</div>
+          <div class="days">الثلاثاء</div>
+          <div class="days">الاربعاء</div>
+          <div class="days">الخميس</div>
+        </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="two-months" class="all-pk-cont">
+        <div class="morning-cont" id="">
+          <div class="morning-sft shfts">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 33.25C28.2132 33.25 33.25 28.2132 33.25 22C33.25 15.7868 28.2132 10.75 22 10.75C15.7868 10.75 10.75 15.7868 10.75 22C10.75 28.2132 15.7868 33.25 22 33.25Z" fill="#FCD227"/>
+              <path d="M22 39.25V43M34.1976 34.1976L36.8492 36.8492M9.80241 34.1976L7.15076 36.8492M39.25 22H43M4.75 22H1M34.1976 9.80241L36.8492 7.15076M9.80241 9.80241L7.15076 7.15076M22 4.75V1M33.25 22C33.25 28.2132 28.2132 33.25 22 33.25C15.7868 33.25 10.75 28.2132 10.75 22C10.75 15.7868 15.7868 10.75 22 10.75C28.2132 10.75 33.25 15.7868 33.25 22Z" stroke="#FCD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="m-p">زيارة فردية</p>
+              <h2 class="nm-shft">شفت صباحي</h2>
+          </div>
+          <div class="morning-elements hidden">
+            <p class="package-type">
+  
+              <span class="orange-color">
+                
+               زيارة فردية 
+              </span> : 
+              باقة زيارة فردية اندونسيا. سعر الباقه يبدا من ٩٩ ريال
+            </p>
+  
+            <p class="text-width">نافذة الوصول للفترة الصباحبة من الساعة ٨ صباحا حتي الساعة ١٠ صباحا وتستمر الخدمة لمدة ٤ ساعات من وصول العاملة</p>
+  
+            <p class="sft-p">زيارة واحدة  وعدد ١ عاملة منزلية</p>
+            <p class="sft-p">مدة انتظار السائق ٥ دقائق عند الوصول </p>
+            <p class="sft-p">
+              
+            : أختر اليوم المناسب للزيارة
+          </p>
+          <div class="days-cont">
+          <div class="days">السبت</div>
+          <div class="days">الاحد</div>
+          <div class="days">الاثنين</div>
+          <div class="days">الثلاثاء</div>
+          <div class="days">الاربعاء</div>
+          <div class="days">الخميس</div>
+        </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="another-two-months" class="all-pk-cont">
+        <div class="morning-cont" id="">
+          <div class="morning-sft shfts">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 33.25C28.2132 33.25 33.25 28.2132 33.25 22C33.25 15.7868 28.2132 10.75 22 10.75C15.7868 10.75 10.75 15.7868 10.75 22C10.75 28.2132 15.7868 33.25 22 33.25Z" fill="#FCD227"/>
+              <path d="M22 39.25V43M34.1976 34.1976L36.8492 36.8492M9.80241 34.1976L7.15076 36.8492M39.25 22H43M4.75 22H1M34.1976 9.80241L36.8492 7.15076M9.80241 9.80241L7.15076 7.15076M22 4.75V1M33.25 22C33.25 28.2132 28.2132 33.25 22 33.25C15.7868 33.25 10.75 28.2132 10.75 22C10.75 15.7868 15.7868 10.75 22 10.75C28.2132 10.75 33.25 15.7868 33.25 22Z" stroke="#FCD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="m-p">زيارة فردية</p>
+              <h2 class="nm-shft">شفت صباحي</h2>
+          </div>
+          <div class="morning-elements hidden">
+            <p class="package-type">
+  
+              <span class="orange-color">
+                
+               زيارة فردية 
+              </span> : 
+              باقة زيارة فردية اندونسيا. سعر الباقه يبدا من ٩٩ ريال
+            </p>
+  
+            <p class="text-width">نافذة الوصول للفترة الصباحبة من الساعة ٨ صباحا حتي الساعة ١٠ صباحا وتستمر الخدمة لمدة ٤ ساعات من وصول العاملة</p>
+  
+            <p class="sft-p">زيارة واحدة  وعدد ١ عاملة منزلية</p>
+            <p class="sft-p">مدة انتظار السائق ٥ دقائق عند الوصول </p>
+            <p class="sft-p">
+              
+            : أختر اليوم المناسب للزيارة
+          </p>
+          <div class="days-cont">
+          <div class="days">السبت</div>
+          <div class="days">الاحد</div>
+          <div class="days">الاثنين</div>
+          <div class="days">الثلاثاء</div>
+          <div class="days">الاربعاء</div>
+          <div class="days">الخميس</div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <a href="date-selection.html" style="text-decoration: none; color: unset">
+   
+  </a>
+  </div>
+</div>
+<div class="more-det">
+
+<div class="first-box">
+<div class="text-1">تفاصيل الحجز</div>
+  <div class="address-text-box">
+    <h1 class="the-address-main"> :العنوان</h1>
+    <div class="address-text-main">
+      <h1 class="addr">Al Har Al Tamimi</h1>
+      <p class="address-par">Princess Noura Bint Abdul Rahman - 7264 - Al Fasall Street</p>
+      <h3 class="nationalty"> الجنسية:اندونيسيا</h3>
+    </div>
+  </div>
+</div>
+
+ <div class="total-cont">
+    <h1 class="total-h">ملخص الدفع</h1>
+    <div class="text-m">
+      <p>
+        :الاجمالي
+
+      </p>
+      <p>١٣٠ ريال</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="every-phone">
+  <div class="phone-first-step">
+
+    <div class="right-f-s">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="18" r="18" fill="#244497"/>
+        <path d="M9.75 18.3214L16.5 24.75L27.75 9.75" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="f-s-p">نوع الخدمة</p>
+    </div>
+
+    <div class="f-s-b">
+      <p class="f-f-p">
+
+        <span class="f-s-s">
+          
+          الخطوة الاولي
+          
+        </span>:
+        نوع الخدمه عاملة منزلية
+      </p>
+      <p class="p-f-s-g">عاملات مدربات باحترافيه عاليه تحت اشراف أكاديمية نجدة</p>
+    </div>
+
+  </div>
+<a href="date-selection.html" style="color: unset; text-decoration: none;">
+  <div class="phone-second-step">
+      <div class="line-f-b">
+    <div class="right-f-s">
+      <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36" fill="none">
+        <circle cx="18.5" cy="18" r="17.5" fill="white" stroke="#5E718D"/>
+        <path d="M26.146 10.354C25.7592 9.96725 25.2347 9.75 24.6877 9.75C24.1408 9.75 23.6162 9.96725 23.2294 10.354L22.3204 11.263L25.237 14.1796L26.146 13.2706C26.5327 12.8838 26.75 12.3592 26.75 11.8123C26.75 11.2653 26.5327 10.7408 26.146 10.354ZM24.4033 15.0133L21.4867 12.0967L11.9403 21.6431C11.4554 22.1278 11.0989 22.7257 10.9031 23.3827L10.2746 25.4924C10.2442 25.5942 10.2419 25.7023 10.268 25.8053C10.2941 25.9083 10.3475 26.0023 10.4226 26.0774C10.4977 26.1525 10.5917 26.2059 10.6947 26.232C10.7977 26.2581 10.9058 26.2558 11.0076 26.2254L13.1173 25.5969C13.7743 25.4011 14.3722 25.0446 14.8569 24.5597L24.4033 15.0133Z" fill="#F06030"/>
+      </svg>
+      <p class="f-s-p">حدد الجنسية</p>
+    </div>
+
+    <div class="f-s-b">
+      <p class="f-f-p">
+
+        <span class="f-s-s">
+          
+          :الخطوة الثانية
+
+        </span>
+        حدد الجنسيات المفضلة     
+       </p>
+       
+    </div>
+  </div>
+  
+
+  </div>
+</a>
+</div>
+
+
+
+</div>
+
+
+
+<script>
+  // Get the buttons and corresponding elements
+  const pkLinks = document.querySelectorAll('.pak-a');
+  const allPkContents = document.querySelectorAll('.all-pk-cont > div');
+
+  // Add click event listeners to the links
+  pkLinks.forEach((link, index) => {
+    link.addEventListener('click', () => showContent(index));
+  });
+
+  // Function to show the selected content and hide others
+  function showContent(index) {
+    // Hide all content elements except the selected one
+    allPkContents.forEach((element, i) => {
+      element.style.display = i === index ? 'block' : 'none';
+    });
+
+    // Get the parent container of the packages
+    const allPkContainer = document.querySelector('.all-pk');
+
+    // Hide the entire package container
+    allPkContainer.style.display = 'none';
+  }
+</script>
+
+
+  <script src="login-script.js"></script>
+<script src="https://kit.fontawesome.com/cc21bd89d5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
