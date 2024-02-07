@@ -9,7 +9,7 @@
     <title>Services</title>
     
     <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
 
 
       .first-box{
@@ -220,8 +220,9 @@
         .line-f-b{
           display: flex;
           flex-direction: row-reverse;
-          justify-content: right;
+          justify-content: space-between;
           align-items: center;
+          width: 90vw;
           padding: 12px 8px;
         }
         .f-s-s{
@@ -273,6 +274,39 @@
         .phone-flag-box h1{
           margin-right: 12px;
         }
+        .all-pk-cont{
+          width: unset !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center !important;
+        }
+        .shfts{
+          width: 345px !important;
+          padding: unset !important;
+          height: 84px !important;
+          padding: 0px 20px !important;
+        }
+        .shfts p,h2{
+          font-size: 17px !important;
+        }
+        .elements-b{
+          padding: 0px 15px !important;
+        }
+        .month-p{
+          width: 351px !important;
+         }
+         .text-pk-b{
+          display: flex;
+          flex-direction: row-reverse;
+          font-size: 14px !important;
+          text-align: left;
+          justify-content: left;
+          margin: auto;
+         }
+         .m-p{
+        
+          text-align: right !important;
+         }
       }
 
       .more-det{
@@ -355,11 +389,17 @@
       }
 
       .days{
-        border: 1px solid #5E718D;
+        border: 2px solid #5E718D;
         padding:8px 24px 8px 24px;
         border-radius: 4px;
         color:#5E718D;
         font-family: 'Almarai';
+      }
+
+      .days.active{
+        background-color: #F06030;
+        color: white;
+        border: none;
       }
 
       .morning-cont,.night-cont{
@@ -370,8 +410,8 @@
       }
   
       .month-p{
-        width: 450px !important;
-        height: 73px !important;
+        width: 450px;
+        height: 73px;
       }
       .hidden{
         display: none !important;
@@ -450,6 +490,38 @@
   scrollbar-width: thin; /* Firefox */
 }
 
+
+    .all-pk-cont {
+      font-family:"Almarai" !important;
+      color: #5E718D;
+      font-weight: 700;
+    }
+
+    .orange-color{
+      color: #F06030;
+    }
+    .days-cont{
+      flex-wrap: wrap;
+    }
+
+
+
+    .shfts.active{
+      background-color: #E6EBF3;
+      color: #244497 !important;
+    }
+
+    .pk-button{
+      width: 95%;
+      background-color: #244497;
+      color: white;
+      font-family:"Almarai";
+      padding: 10px 45px;
+      border-radius: 4px;
+      border: none;
+      margin-top: 20px;
+      text-align: center;
+    }
     </style>
     
     
@@ -520,7 +592,7 @@
             <p class="m-p">زيارة فردية</p>
             <h2 class="nm-shft">شفت صباحي</h2>
         </div>
-        <div class="morning-elements hidden">
+        <div class="morning-elements elements-b hidden">
           <p class="package-type">
 
             <span class="orange-color">
@@ -546,6 +618,7 @@
         <div class="days">الاربعاء</div>
         <div class="days">الخميس</div>
       </div>
+      <button class="pk-button">تفعيل الباقه</button>
         </div>
       </div>
 
@@ -558,7 +631,7 @@
             <p class="m-p">زيارة فردية</p>
             <h2 class="nm-shft">شفت صباحي</h2>
         </div>
-        <div class="night-elements hidden">
+        <div class="night-elements elements-b hidden">
           <p class="package-type">
 
             <span class="orange-color">
@@ -584,6 +657,7 @@
         <div class="days">الاربعاء</div>
         <div class="days">الخميس</div>
       </div>
+      <button class="pk-button">تفعيل الباقه</button>
         </div>
       </div>
     </div>
@@ -670,7 +744,7 @@
               <p class="m-p">زيارة فردية</p>
               <h2 class="nm-shft">شفت صباحي</h2>
           </div>
-          <div class="night-elements hidden">
+          <div class="night-elements elements-b hidden">
             <p class="package-type">
   
               <span class="orange-color">
@@ -696,6 +770,7 @@
           <div class="days">الاربعاء</div>
           <div class="days">الخميس</div>
         </div>
+        <button class="pk-button">تفعيل الباقه</button>
           </div>
         </div>
       </div>
@@ -710,7 +785,7 @@
               <p class="m-p">زيارة فردية</p>
               <h2 class="nm-shft">شفت صباحي</h2>
           </div>
-          <div class="morning-elements hidden">
+          <div class="morning-elements elements-b hidden">
             <p class="package-type">
   
               <span class="orange-color">
@@ -736,6 +811,7 @@
           <div class="days">الاربعاء</div>
           <div class="days">الخميس</div>
         </div>
+        <button class="pk-button">تفعيل الباقه</button>
           </div>
         </div>
       </div>
@@ -901,7 +977,7 @@
         <h2 class="nm-shft">شفت صباحي</h2>
         </div>
     </div>
-    <div class="morning-elements hidden">
+    <div class="morning-elements elements-b hidden">
       <p class="package-type">
 
         <span class="orange-color">
@@ -927,19 +1003,22 @@
     <div class="days">الاربعاء</div>
     <div class="days">الخميس</div>
   </div>
+  <button class="pk-button">تفعيل الباقه</button>
     </div>
   </div>
 
   <div class="night-cont">
+    
     <div class="night-sft shfts" >
       <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M34.6242 22.6209C31.6797 23.4391 28.5707 23.4607 25.6151 22.6833C22.6595 21.906 19.9634 20.3577 17.8024 18.1967C15.6415 16.0358 14.0931 13.3397 13.3158 10.3841C12.5385 7.42851 12.56 4.31952 13.3782 1.375L13.3787 1.37515C10.4744 2.18308 7.83257 3.73787 5.71627 5.88465C3.59997 8.03143 2.0831 10.6953 1.31677 13.6107C0.550442 16.5262 0.561406 19.5917 1.34857 22.5016C2.13573 25.4115 3.67162 28.0644 5.80322 30.196C7.93483 32.3276 10.5877 33.8635 13.4977 34.6506C16.4076 35.4377 19.473 35.4487 22.3885 34.6823C25.304 33.916 27.9678 32.3991 30.1146 30.2827C32.2614 28.1664 33.8161 25.5245 34.624 22.6203L34.6242 22.6209Z" fill="#2B4382" stroke="#2B4382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        
+        <div class="f-t" style="display:flex; flex-direction: column !important;">
         <p class="m-p">زيارة فردية</p>
         <h2 class="nm-shft">شفت صباحي</h2>
     </div>
-    <div class="night-elements hidden">
+    </div>
+    <div class="night-elements elements-b hidden">
       <p class="package-type">
 
         <span class="orange-color">
@@ -965,6 +1044,7 @@
     <div class="days">الاربعاء</div>
     <div class="days">الخميس</div>
   </div>
+  <button class="pk-button">تفعيل الباقه</button>
     </div>
   </div>
 </div>
@@ -985,12 +1065,12 @@
           </defs>
           </svg>
           
-         
+         <div class="text-pk-b">
           <p class="m-p">
-            -باقة شهر</p>
-          <h2 class="nm-shft">
-            زيارة بالاسبوع- اندونيسيا</h2>
-          
+            باقة شهر
+          <span class="nm-shft">-
+            زيارة بالاسبوع- اندونيسيا</span> </p>
+          </div>
       </div>
    
     </div>
@@ -1008,12 +1088,16 @@
           </defs>
           </svg>
           
-          
+          <div class="text-pk-b">
+
           <p class="m-p">
-            - باقة شهر 
+            باقة شهر 
+          
+            -  <span class="nm-shft">
+              زيارتين بالاسبوع - اندونيسيا</span>
           </p>
-          <h2 class="nm-shft">
-            زيارتين بالاسبوع - اندونيسيا</h2>
+         
+          </div>
       </div>
     </div>
  
@@ -1031,11 +1115,13 @@
           </defs>
           </svg>
           
-          
+          <div class="text-pk-b">
+
           <p class="m-p">
-            -باقة شهر</p>
-          <h2 class="nm-shft">
-            ٣ زيارات بالاسبوع- اندونيسيا</h2>
+          باقة شهر
+          <span class="nm-shft">  -
+            ٣ زيارات بالاسبوع- اندونيسيا</span></p>
+          </div>
       </div>
     
     </div>
@@ -1052,7 +1138,7 @@
           <p class="m-p">زيارة فردية</p>
           <h2 class="nm-shft">شفت صباحي</h2>
       </div>
-      <div class="night-elements hidden">
+      <div class="night-elements elements-b hidden">
         <p class="package-type">
 
           <span class="orange-color">
@@ -1078,6 +1164,7 @@
       <div class="days">الاربعاء</div>
       <div class="days">الخميس</div>
     </div>
+      <button class="pk-button">تفعيل الباقه</button>
       </div>
     </div>
   </div>
@@ -1092,7 +1179,7 @@
           <p class="m-p">زيارة فردية</p>
           <h2 class="nm-shft">شفت صباحي</h2>
       </div>
-      <div class="morning-elements hidden">
+      <div class="morning-elements elements-b hidden">
         <p class="package-type">
 
           <span class="orange-color">
@@ -1118,6 +1205,7 @@
       <div class="days">الاربعاء</div>
       <div class="days">الخميس</div>
     </div>
+    <button class="pk-button">تفعيل الباقه</button>
       </div>
     </div>
   </div>
@@ -1135,6 +1223,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Query selectors
   const pkLinks = document.querySelectorAll('.pk-nav .pak-a');
+  const daysBox = document.querySelectorAll('.days');
+  const shfts = document.querySelectorAll('.shfts');
   const allSections = document.querySelectorAll('.all-pk-cont > div');
   const morningElements = document.querySelectorAll('.morning-elements');
   const nightElements = document.querySelectorAll('.night-elements');
@@ -1178,6 +1268,22 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add('active');
       const sectionId = this.dataset.sectionId; // Use dataset to get section ID
       showContent(sectionId);
+    });
+  });
+  daysBox.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      daysBox.forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
+   
+    });
+  });
+  shfts.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      shfts.forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
+   
     });
   });
 
