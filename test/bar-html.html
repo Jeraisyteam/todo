@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step Progress Bar</title>
+<style>
+  .progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px;
+    padding: 0;
+  }
+
+  .step {
+    text-align: center;
+    width: 20%;
+    position: relative;
+  }
+
+  .step::before,
+  .step::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    height: 4px;
+    background: #ccc;
+  }
+
+  .step::before {
+    right: 50%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .step:first-child::before {
+    content: none;
+  }
+
+  .step::after {
+    left: 50%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .step:last-child::after {
+    content: none;
+  }
+
+  .step.active::before,
+  .step.active::after {
+    background: #F06030;
+  }
+
+  .step.active .icon {
+    border-color: blue;
+  }
+
+  .step .icon {
+    width: 48px;
+    height: 48px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    background: white;
+    color: #ccc;
+    z-index: 2;
+    position: relative;
+  }
+
+  .step.active .icon {
+    color: white;
+    background: #244497;
+  }
+
+  .step .text {
+    color: #ccc;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .step.active .text {
+    color: #244497;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-container">
+  <div class="step ">
+    <span class="icon"><svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 13.4286L11 22L26 2" fill="#244497"/>
+      <path d="M2 13.4286L11 22L26 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </span>
+    <span class="text">ماضي العمر</span>
+  </div>
+  <div class="step active">
+    <span class="icon"><svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 13.4286L11 22L26 2" fill="#244497"/>
+      <path d="M2 13.4286L11 22L26 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </span>
+    <span class="text">جدد الباقة</span>
+  </div>
+  <div class="step active">
+    <span class="icon">✓</span>
+    <span class="text">جدد الزيارة</span>
+  </div>
+  <div class="step active">
+    <span class="icon">✓</span>
+    <span class="text">جدد الإقامة</span>
+  </div>
+  <div class="step active">
+    <span class="icon">✓</span>
+    <span class="text">نوع الخدمة</span>
+  </div>
+</div>
+
+</body>
+</html>
