@@ -292,10 +292,169 @@
     </style>
     
     
-
+    <style>
+      .progress-container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       position: relative;
+       margin: 20px;
+       padding: 0;
+     }
+   
+     .step {
+       text-align: center;
+       width: 20%;
+       position: relative;
+     }
+   
+     .step::before,
+     .step::after {
+       content: '';
+       position: absolute;
+       top: 40%;
+       transform: translateY(-50%);
+       height: 1px;
+       background: #ccc;
+     }
+   
+     .step::before {
+       right: 50%;
+       width: 100%;
+       z-index: 1;
+     }
+   
+     .step:first-child::before {
+       content: none;
+     }
+   
+     .step::after {
+       left: 50%;
+       width: 100%;
+       z-index: 1;
+     }
+   
+     .step:last-child::after {
+       content: none;
+     }
+   
+     .step.active::before,
+     .step.active::after {
+       background: #F06030;
+     }
+   
+     .step.active .icon {
+       border-color: #244497;
+     }
+   
+     .step .icon {
+       width: 48px;
+       height: 48px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* border: 2px solid #F06030; */
+       border-radius: 50%;
+       background: white;
+       color: #ccc;
+       z-index: 2;
+       position: relative;
+       margin: 0 auto;
+     }
+   
+     .step.active .icon {
+       color: white;
+       background: #244497;
+       border-color: #244497;
+     }
+   
+     .step .text {
+       color: #ccc;
+       display: block;
+       margin-top: 8px;
+     }
+   
+     .step.active .text {
+       color: #244497;
+     }
+     
+     .icon svg {
+       fill: #244497;
+     }
+     
+     .icon.active svg path {
+       stroke: white;
+     }
+  
+    .working-on .icon{
+      border: 1px solid #5E718D !important;
+     }
+  
+    #grayed{
+      color: #5E718D !important;
+     }
+     
+   </style>
   </head>
-<body
-><div class="all">
+<body>
+  
+  <div class="all">
+
+    <div class="progress-container every-pc">
+      <div class="step active">
+        <span class="icon">
+          <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 13.4286L11 22L26 2" fill="#244497"></path>
+          <path d="M2 13.4286L11 22L26 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          </span>
+        <span class="text">نوع الخدمة</span>
+      </div>
+      <div class="step working-on">
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.1947 0.805296C20.679 0.289669 19.9796 0 19.2503 0C18.5211 0 17.8216 0.289669 17.3059 0.805296L16.0938 2.01739L19.9826 5.90617L21.1947 4.69407C21.7103 4.17836 22 3.47895 22 2.74968C22 2.02041 21.7103 1.32101 21.1947 0.805296ZM18.8711 7.01769L14.9823 3.12892L2.2537 15.8575C1.60716 16.5037 1.13188 17.3009 0.870841 18.177L0.032743 20.9898C-0.0077202 21.1256 -0.0107381 21.2697 0.0240089 21.407C0.0587558 21.5443 0.129975 21.6697 0.230131 21.7699C0.330287 21.87 0.455654 21.9412 0.592968 21.976C0.730282 22.0107 0.874435 22.0077 1.01017 21.9673L3.82304 21.1292C4.69909 20.8681 5.49626 20.3928 6.14247 19.7463L18.8711 7.01769Z" fill="#F06030"/>
+            </svg>
+            
+          </span>
+        <span class="text" id="grayed">حدد الجنسية</span>
+      </div>
+      <div class="step ac working-on">
+        <span class="icon">
+          <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.704 7.28C9.272 7.392 10.536 7.84 11.496 8.624C12.472 9.408 12.96 10.464 12.96 11.792C12.96 12.832 12.688 13.76 12.144 14.576C11.616 15.376 10.856 16 9.864 16.448C8.888 16.896 7.72 17.12 6.36 17.12C5.24 17.12 4.136 16.96 3.048 16.64C1.96 16.304 1.032 15.864 0.264 15.32L1.44 13.16C2.096 13.704 2.832 14.128 3.648 14.432C4.48 14.72 5.32 14.864 6.168 14.864C7.016 14.864 7.736 14.744 8.328 14.504C8.936 14.248 9.4 13.896 9.72 13.448C10.04 12.984 10.2 12.456 10.2 11.864C10.2 10.92 9.84 10.208 9.12 9.728C8.4 9.248 7.4 9.008 6.12 9.008H3.672V7.328L9.456 1.64L9.84 2.6H1.104L1.08 0.199999H12.12V1.88L5.832 8.072L5.472 7.112L7.704 7.28Z" fill="#5E718D"/>
+            </svg>
+            
+            
+          
+          </span>
+        <span class="text p-orange" style="color:#5E718D;">حدد التاريخ</span>
+      </div>
+
+   <div class="step ac working-on">
+        <span class="icon">
+          <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.264 12.824V10.808L5.976 0.199999H8.712L2.712 11.456L2.064 10.424H13.584V12.824H0.264ZM8.448 6.344H11.088V17H8.448V6.344Z" fill="#5E718D"/>
+            </svg>
+            
+            
+          
+          </span>
+        <span class="text p-orange" style="color:#5E718D;">حدد الباقة</span>
+      </div>
+     
+      <div class="step ac working-on">
+        <span class="icon">
+          <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.088 7.64L3.464 6.416C3.656 6.4 3.936 6.392 4.304 6.392C4.688 6.376 5.088 6.368 5.504 6.368C5.92 6.368 6.272 6.368 6.56 6.368C7.84 6.368 8.944 6.592 9.872 7.04C10.816 7.488 11.544 8.096 12.056 8.864C12.568 9.632 12.824 10.504 12.824 11.48C12.824 12.616 12.552 13.608 12.008 14.456C11.48 15.304 10.728 15.96 9.752 16.424C8.792 16.888 7.656 17.12 6.344 17.12C5.32 17.12 4.24 16.944 3.104 16.592C1.984 16.24 0.992 15.776 0.128 15.2L1.28 13.04C1.984 13.584 2.752 14.008 3.584 14.312C4.416 14.616 5.248 14.768 6.08 14.768C7.216 14.768 8.12 14.488 8.792 13.928C9.464 13.368 9.8 12.616 9.8 11.672C9.8 10.776 9.472 10.072 8.816 9.56C8.176 9.032 7.192 8.768 5.864 8.768C5.672 8.768 5.392 8.776 5.024 8.792C4.656 8.792 4.248 8.808 3.8 8.84C3.368 8.856 2.944 8.88 2.528 8.912C2.112 8.944 1.752 8.976 1.448 9.008V0.199999H12.104V2.6H2.816L4.088 1.352V7.64Z" fill="#5E718D"/>
+            </svg>
+            
+          
+          </span>
+        <span class="text p-orange" style="color:#5E718D;">ملخص الحجز</span>
+      </div>
+    </div>
+
   <header class="main-head">
     <div class="logo navbar-brand">
         <img src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="">

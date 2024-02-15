@@ -68,7 +68,7 @@
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-around;
-        /* min-height: 88vh; */
+        min-height: 30vh;
       }
 
 
@@ -178,7 +178,14 @@
         .every-pc{
           display: none;
         }
-    
+        .phone-flag-box{
+          display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        border: 1px solid #5E718D;
+        border-radius: 8px;
+        }
+
         .phone-first-step{
           padding: 10px 8px;
           border-radius: 6px;
@@ -213,7 +220,7 @@
         .line-f-b{
           display: flex;
           flex-direction: row-reverse;
-          justify-content: center;
+          justify-content: right;
           align-items: center;
           padding: 12px 8px;
         }
@@ -284,296 +291,116 @@
       }
     </style>
     
-
-
-    <style>
-      body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .month-navigation {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0;
-        align-items: center;
-      }
-  
-      .month-navigation button {
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-      }
-  
-      .btn-all{
-          width: 751px;
-        height: 279px;
-        overflow-y: auto;
-      }
-
-      .the-cotn {
-      
-        gap: 20px;
-        border: 1px solid #ccc;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-      }
-  
-      .aol {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
-        padding: 10px;
-        gap: 5px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-  
-      .aol p {
-        margin: 0;
-        padding: 0;
-      }
-  
-      .months {
-        font-size: 18px;
-        font-weight: bold;
-        color: #3498db;
-      }
-  
-      .day-number {
-        font-size: 24px;
-        color: #333;
-      }
-  
-      .day {
-        text-transform: capitalize;
-        color: #555;
-      }
-  
-      .btn-all{
-        position: relative;
-      }
-      
-      .month-navigation{
-      position: absolute;  
-      right: 0;
-      left: 0;
-      top: 0;
-      display: flex;
-      padding: 10px 30px;
-      justify-content: space-between;
-  
-      }
-      .all{
-        overflow-y: auto !important;
-      }
-      .the-cotn{
-        padding-top: 60px;
-  
-      }
-      footer{
-        width: 100vw;
-      }
-      .phone-second-step{
-
-      }
-
-      @media (max-width:790px){
-        .btn-all{
-          width: 100%;
-        height: 379px;
-        overflow-y: auto;
-      }
-
-      .months{
-        font-size: 10px;
-      }
-      .day{
-        font-size: 10px;
-      }
-      }
-    </style>
-
-
-<style>
-  .progress-container {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   position: relative;
-   margin: 20px;
-   padding: 0;
- }
-
- .step {
-   text-align: center;
-   width: 20%;
-   position: relative;
- }
-
- .step::before,
- .step::after {
-   content: '';
-   position: absolute;
-   top: 40%;
-   transform: translateY(-50%);
-   height: 1px;
-   background: #ccc;
- }
-
- .step::before {
-   right: 50%;
-   width: 100%;
-   z-index: 1;
- }
-
- .step:first-child::before {
-   content: none;
- }
-
- .step::after {
-   left: 50%;
-   width: 100%;
-   z-index: 1;
- }
-
- .step:last-child::after {
-   content: none;
- }
-
- .step.active::before,
- .step.active::after {
-   background: #F06030;
- }
-
- .step.active .icon {
-   border-color: #244497;
- }
-
- .step .icon {
-   width: 48px;
-   height: 48px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   /* border: 2px solid #F06030; */
-   border-radius: 50%;
-   background: white;
-   color: #ccc;
-   z-index: 2;
-   position: relative;
-   margin: 0 auto;
- }
-
- .step.active .icon {
-   color: white;
-   background: #244497;
-   border-color: #244497;
- }
-
- .step .text {
-   color: #ccc;
-   display: block;
-   margin-top: 8px;
- }
-
- .step.active .text {
-   color: #244497;
- }
- 
- .icon svg {
-   fill: #244497;
- }
- 
- .icon.active svg path {
-   stroke: white;
- }
-
-.working-on .icon{
-  border: 1px solid #5E718D !important;
- }
-
-#grayed{
-  color: #5E718D !important;
- }
- 
-</style>
     
-
+    <style>
+      .progress-container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       position: relative;
+       margin: 20px;
+       padding: 0;
+     }
+   
+     .step {
+       text-align: center;
+       width: 20%;
+       position: relative;
+     }
+   
+     .step::before,
+     .step::after {
+       content: '';
+       position: absolute;
+       top: 40%;
+       transform: translateY(-50%);
+       height: 1px;
+       background: #ccc;
+     }
+   
+     .step::before {
+       right: 50%;
+       width: 100%;
+       z-index: 1;
+     }
+   
+     .step:first-child::before {
+       content: none;
+     }
+   
+     .step::after {
+       left: 50%;
+       width: 100%;
+       z-index: 1;
+     }
+   
+     .step:last-child::after {
+       content: none;
+     }
+   
+     .step.active::before,
+     .step.active::after {
+       background: #F06030;
+     }
+   
+     .step.active .icon {
+       border-color: #244497;
+     }
+   
+     .step .icon {
+       width: 48px;
+       height: 48px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* border: 2px solid #F06030; */
+       border-radius: 50%;
+       background: white;
+       color: #ccc;
+       z-index: 2;
+       position: relative;
+       margin: 0 auto;
+     }
+   
+     .step.active .icon {
+       color: white;
+       background: #244497;
+       border-color: #244497;
+     }
+   
+     .step .text {
+       color: #ccc;
+       display: block;
+       margin-top: 8px;
+     }
+   
+     .step.active .text {
+       color: #244497;
+     }
+     
+     .icon svg {
+       fill: #244497;
+     }
+     
+     .icon.active svg path {
+       stroke: white;
+     }
+  
+    .working-on .icon{
+      border: 1px solid #5E718D !important;
+     }
+  
+    #grayed{
+      color: #5E718D !important;
+     }
+     
+   </style>
   </head>
 <body>
-<div class="all">
-  <div class="progress-container every-pc">
-    <div class="step active">
-      <span class="icon">
-        <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 13.4286L11 22L26 2" fill="#244497"></path>
-        <path d="M2 13.4286L11 22L26 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        </span>
-      <span class="text">نوع الخدمة</span>
-    </div>
-    <div class="step active">
-      <span class="icon">
-        <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 13.4286L11 22L26 2" fill="#244497"></path>
-        <path d="M2 13.4286L11 22L26 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        </span>
-      <span class="text">حدد الجنسية</span>
-    </div>
-    <div class="step ac working-on">
-      <span class="icon">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21.1947 0.805296C20.679 0.289669 19.9796 0 19.2503 0C18.5211 0 17.8216 0.289669 17.3059 0.805296L16.0938 2.01739L19.9826 5.90617L21.1947 4.69407C21.7103 4.17836 22 3.47895 22 2.74968C22 2.02041 21.7103 1.32101 21.1947 0.805296ZM18.8711 7.01769L14.9823 3.12892L2.2537 15.8575C1.60716 16.5037 1.13188 17.3009 0.870841 18.177L0.032743 20.9898C-0.0077202 21.1256 -0.0107381 21.2697 0.0240089 21.407C0.0587558 21.5443 0.129975 21.6697 0.230131 21.7699C0.330287 21.87 0.455654 21.9412 0.592968 21.976C0.730282 22.0107 0.874435 22.0077 1.01017 21.9673L3.82304 21.1292C4.69909 20.8681 5.49626 20.3928 6.14247 19.7463L18.8711 7.01769Z" fill="#F06030"/>
-          </svg>
-          
-          
-        
-        </span>
-      <span class="text p-orange" style="color:#5E718D;">حدد التاريخ</span>
-    </div>
+  
+  <div class="all">
 
- <div class="step ac working-on">
-      <span class="icon">
-        <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.264 12.824V10.808L5.976 0.199999H8.712L2.712 11.456L2.064 10.424H13.584V12.824H0.264ZM8.448 6.344H11.088V17H8.448V6.344Z" fill="#5E718D"/>
-          </svg>
-          
-          
-        
-        </span>
-      <span class="text p-orange" style="color:#5E718D;">حدد الباقة</span>
-    </div>
-   
-    <div class="step ac working-on">
-      <span class="icon">
-        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.088 7.64L3.464 6.416C3.656 6.4 3.936 6.392 4.304 6.392C4.688 6.376 5.088 6.368 5.504 6.368C5.92 6.368 6.272 6.368 6.56 6.368C7.84 6.368 8.944 6.592 9.872 7.04C10.816 7.488 11.544 8.096 12.056 8.864C12.568 9.632 12.824 10.504 12.824 11.48C12.824 12.616 12.552 13.608 12.008 14.456C11.48 15.304 10.728 15.96 9.752 16.424C8.792 16.888 7.656 17.12 6.344 17.12C5.32 17.12 4.24 16.944 3.104 16.592C1.984 16.24 0.992 15.776 0.128 15.2L1.28 13.04C1.984 13.584 2.752 14.008 3.584 14.312C4.416 14.616 5.248 14.768 6.08 14.768C7.216 14.768 8.12 14.488 8.792 13.928C9.464 13.368 9.8 12.616 9.8 11.672C9.8 10.776 9.472 10.072 8.816 9.56C8.176 9.032 7.192 8.768 5.864 8.768C5.672 8.768 5.392 8.776 5.024 8.792C4.656 8.792 4.248 8.808 3.8 8.84C3.368 8.856 2.944 8.88 2.528 8.912C2.112 8.944 1.752 8.976 1.448 9.008V0.199999H12.104V2.6H2.816L4.088 1.352V7.64Z" fill="#5E718D"/>
-          </svg>
-          
-        
-        </span>
-      <span class="text p-orange" style="color:#5E718D;">ملخص الحجز</span>
-    </div>
-  </div>
-
-
+    
 
   <header class="main-head">
     <div class="logo navbar-brand">
@@ -606,162 +433,9 @@
 
 
 
-<div class="every-pc">
-<div class="all-3-conten">
-  <div class="text-c">
-    <h1 class="step-1">الخطوة الاولي : نوع الخدمه عاملة منزلية</h1>
-    <h3 class="step-desc">عاملات مدربات باحترافيه عاليه تحت اشراف أكاديمية نجدة</h3>
-  </div>
-  <div class="h-flags">
-    <h1 class="space-text">الخطوة الثانية : حدد الجنسيات المفضلة</h1>
-    <h1 class="space-text">
-      الخطوة الثالثة : حدد تاريخ بداية الخدمة 
-    </h1>
- <h3 class="step-desc">عاملات مدربات باحترافيه عاليه تحت اشراف أكاديمية نجدة</h3>
+ 678
 
 
-
-
-<!-- Second calendar -->
-<div class="btn-all">
-  <a href="package-selection.html" style="color: unset; text-decoration: none;">
-  <div class="the-cotn" id="container2">
-    <!-- Dates for the current month will be dynamically generated here -->
-  </div>
-</a>
-  <div class="month-navigation">
-    <button onclick="previousMonth('container2')">&#9664;</button>
-    <button onclick="nextMonth('container2')">&#9654;</button>
-  </div>
-</div>
-  </div>
-</div>
-<div class="more-det">
-
-<div class="first-box">
-<div class="text-1">تفاصيل الحجز</div>
-  <div class="address-text-box">
-    <h1 class="the-address-main"> :العنوان</h1>
-    <div class="address-text-main">
-      <h1 class="addr">Al Har Al Tamimi</h1>
-      <p class="address-par">Princess Noura Bint Abdul Rahman - 7264 - Al Fasall Street</p>
-      <h3 class="nationalty"> الجنسية:اندونيسيا</h3>
-    </div>
-  </div>
-</div>
-
- <div class="total-cont">
-    <h1 class="total-h">ملخص الدفع</h1>
-    <div class="text-m">
-      <p>
-        :الاجمالي
-
-      </p>
-      <p>١٣٠ ريال</p>
-    </div>
-  </div>
-
-</div>
-</div>
-
-<div class="every-phone">
-  
-  <div class="phone-first-step">
-
-    <div class="right-f-s">
-      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="18" fill="#244497"/>
-        <path d="M9.75 18.3214L16.5 24.75L27.75 9.75" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <p class="f-s-p">نوع الخدمة</p>
-    </div>
-
-    <div class="f-s-b">
-      <p class="f-f-p">
-
-        <span class="f-s-s">
-          
-          الخطوة الاولي
-          
-        </span>:
-        نوع الخدمه عاملة منزلية
-      </p>
-      <p class="p-f-s-g">عاملات مدربات باحترافيه عاليه تحت اشراف أكاديمية نجدة</p>
-    </div>
-
-  </div>
-  
-  <div class="phone-first-step">
-
-    <div class="right-f-s">
-      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="18" fill="#244497"/>
-        <path d="M9.75 18.3214L16.5 24.75L27.75 9.75" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <p class="f-s-p">حدد الجنسية</p>
-    </div>
-
-    <div class="f-s-b">
-      <p class="f-f-p">
-
-        <span class="f-s-s">
-          
-          الخطوة الثانية 
-          
-        </span>:
-        حدد الجنسيات المفضلة     
-       </p>
-  
-    </div>
-
-  </div>
-
-  <div class="phone-second-step">
-      <div class="line-f-b">
-    <div class="right-f-s">
-      <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36" fill="none">
-        <circle cx="18.5" cy="18" r="17.5" fill="white" stroke="#5E718D"/>
-        <path d="M26.146 10.354C25.7592 9.96725 25.2347 9.75 24.6877 9.75C24.1408 9.75 23.6162 9.96725 23.2294 10.354L22.3204 11.263L25.237 14.1796L26.146 13.2706C26.5327 12.8838 26.75 12.3592 26.75 11.8123C26.75 11.2653 26.5327 10.7408 26.146 10.354ZM24.4033 15.0133L21.4867 12.0967L11.9403 21.6431C11.4554 22.1278 11.0989 22.7257 10.9031 23.3827L10.2746 25.4924C10.2442 25.5942 10.2419 25.7023 10.268 25.8053C10.2941 25.9083 10.3475 26.0023 10.4226 26.0774C10.4977 26.1525 10.5917 26.2059 10.6947 26.232C10.7977 26.2581 10.9058 26.2558 11.0076 26.2254L13.1173 25.5969C13.7743 25.4011 14.3722 25.0446 14.8569 24.5597L24.4033 15.0133Z" fill="#F06030"/>
-      </svg>
-      <p class="f-s-p">حدد التاريخ</p>
-    </div>
-
-
-
-    
-    <div class="f-s-b">
-      <p class="f-f-p">
-
-        <span class="f-s-s">
-          
-          :الخطوة الثالثة
-
-        </span>
-        حدد تاريخ بداية الخدمة 
-       </p>
-       
-    </div>
-    
-  </div>
-
-  <div class="btn-all">
-    <a href="package-selection.html" style="color: unset; text-decoration: none;">
-    <div class="the-cotn" id="container1">
-      <!-- Dates for the current month will be dynamically generated here -->
-    </div>
-  </a>
-    <div class="month-navigation">
-      <button onclick="previousMonth('container1')">&#9664;</button>
-      <button onclick="nextMonth('container1')">&#9654;</button>
-    </div>
-  </div>
-  
-
-  </div>
-
-
-  
-</div>
 <footer class="footer">
             
 
@@ -822,70 +496,6 @@
 </div>
 </footer>
 
-</div>
-<script>
-  function generateMonthDates(container, year, month) {
-    container.innerHTML = ""; // Clear previous dates
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-    for (let dayNumber = 1; dayNumber <= daysInMonth; dayNumber++) {
-      const date = new Date(year, month, dayNumber);
-      const options = { weekday: 'long' };
-      const day = new Intl.DateTimeFormat('en-US', options).format(date);
-
-      const block = document.createElement("div");
-      block.classList.add("aol");
-
-      const months = document.createElement("p");
-      months.classList.add("months");
-      months.textContent = date.toLocaleString('default', { month: 'long' });
-      block.appendChild(months);
-
-      const dayNumberElement = document.createElement("p");
-      dayNumberElement.classList.add("day-number");
-      dayNumberElement.textContent = dayNumber;
-      block.appendChild(dayNumberElement);
-
-      const dayElement = document.createElement("p");
-      dayElement.classList.add("day");
-      dayElement.textContent = day;
-      block.appendChild(dayElement);
-
-      container.appendChild(block);
-    }
-  }
-
-  function previousMonth(containerId) {
-    const container = document.getElementById(containerId);
-    let currentMonth = parseInt(container.getAttribute("data-month"));
-    currentMonth = (currentMonth - 1 + 12) % 12;
-    container.setAttribute("data-month", currentMonth);
-    generateMonthDates(container, new Date().getFullYear(), currentMonth);
-  }
-
-  function nextMonth(containerId) {
-    const container = document.getElementById(containerId);
-    let currentMonth = parseInt(container.getAttribute("data-month"));
-    currentMonth = (currentMonth + 1) % 12;
-    container.setAttribute("data-month", currentMonth);
-    generateMonthDates(container, new Date().getFullYear(), currentMonth);
-  }
-
-  function initializeCalendar(containerId) {
-    let currentMonth = new Date().getMonth();
-    const container = document.getElementById(containerId);
-    container.setAttribute("data-month", currentMonth);
-    generateMonthDates(container, new Date().getFullYear(), currentMonth);
-  }
-
-  // Initialize the calendars with unique container IDs
-  initializeCalendar("container1");
-  initializeCalendar("container2");
-  // Add more if needed
-</script>
-
-
-
 
   <script src="login-script.js"></script>
 <script src="https://kit.fontawesome.com/cc21bd89d5.js" crossorigin="anonymous"></script>
@@ -893,8 +503,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
