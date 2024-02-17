@@ -6,394 +6,133 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png">
-    <title>Services</title>
+    <title>sign up</title>
     
-    <style>
+   <style>
+    .form{
+      border: 1px solid red;
+      display: flex;
+      justify-content: right;    
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
 
+    .right-form,.left-form{
+      display: flex;
+      flex-direction: column;
+    }
 
-      .first-box{
-        display: flex;
-        width: 593px;
-        padding: 16px 8px;
-        flex-direction: column;
-        gap: 10px;
-        border-radius: 8px;
-        border: 1px solid var(--text, #5E718D);
-        background: #F9F9FA;
-      }
+    label{
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
 
-      .the-address-main{
-        color: var(--text, #5E718D);
-        font-family: Almarai;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%; /* 25.2px */
-        text-align: right;
-      }
-
-      .address-text-main h1{
-        color: var(--text, #5E718D);
-          font-family: "Public Sans";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-      }
-
-      .address-text-main p{
-        width: 300px;
-        color: var(--text, #5E718D);
-        font-family: "Public Sans";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-align: left;
-      }
-
-      .nationalty{
-        color: var(--text, #5E718D);
-        font-family: Almarai;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%; /* 25.2px */
-        text-align: right;
-      }
-
-      .every-pc{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 30vh;
-      }
+    .form-cont{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: right;
+    }
 
 
-      .total-cont{
-        width: 593px;
-        border: 1px solid #5E718D;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100px;
-        margin-top: 20px;
-        border-radius: 8px;
-      }
-
-      .step-1{
-        color: var(--primary-one, #244497);
-        /* Paragraph 1 */
-        font-family: Almarai;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%; /* 33.6px */
-        text-align: right;
-      }
-
-      .step-desc{
-        color: var(--text, #5E718D);
-        font-family: Almarai;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 160%; /* 25.6px */
-        text-align: right;
-      }
-
-      .space-text{
-        color: var(--primary-one, #244497);
-        font-family: Almarai;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700; 
-        line-height: 140%; /* 33.6px */
-      }
-      .text-m{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding: 0px 10px;
-        margin-top: auto;
-        width: 100%;
-      }
-      .total-h{
-        margin-top: 10px;
-        color: var(--primary-one, #244497);
-        font-family: Almarai;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%; /* 28px */
-      }
-
-      .h-flags{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        flex-wrap: wrap;
-      }
-      .all-3-conten{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 25px;
-      }
-      .flag-cont{
-        display: flex;
-        flex-direction: row-reverse;
-        /* justify-content: space-around;
-        align-items: flex-start; */
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .flag-box{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        /* justify-content: space-between; */
-        border: 1px solid #5E718D;
-        border-radius: 8px;
-        padding: 8px 15px;
-      }
-
-      .text-m p{
-        color: var(--primary-two, #F06030);
-        font-family: "Public Sans";
-        font-size: 20px; 
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-
-      .space-text{
-        margin-bottom:28px;
-      }
-
-      @media (max-width:700px) {
-        .every-pc{
-          display: none;
-        }
-        .phone-flag-box{
-          display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        border: 1px solid #5E718D;
-        border-radius: 8px;
-        }
-
-        .phone-first-step{
-          padding: 10px 8px;
-          border-radius: 6px;
-          border: 1px solid rgba(94, 113, 141, 0.20);
-          background: #FBFBFB;
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: center;
-          gap: 30px;
-        }
-        .right-f-s{
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        }
-
-        .phone-second-step{
-           display: grid;
-           border-radius: 6px;
-           border: 1px solid rgba(94, 113, 141, 0.20);
-           background: #FBFBFB;           
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-           gap: 30px;
-           padding: 10px;
-          padding-bottom: 40px;
-
-        }
+    .form-cont .text-input {
+  width: 500px; 
+  max-width: 400px;   
+  height: 56px; 
+  box-sizing: border-box; 
+  padding: 0 12px;   
+  border: none;
+  border-radius: 4px; 
+  background-color: #F1F1F1;
+}
 
 
-        .line-f-b{
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: right;
-          align-items: center;
-          padding: 12px 8px;
-        }
-        .f-s-s{
-          color: var(--text, #5E718D);
-          font-family: Almarai;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 160%; /* 25.6px */
-        }
-        .f-f-p{
-          color: var(--primary-one, #244497);
-          font-family: Almarai;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 160%;
-        }
-        .p-f-s-g{
-          color: var(--text, #5E718D);
-          text-align: right;
-          font-family: Almarai;
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 160%; 
-        }
+@media (max-width: 480px) {
+  .form-cont .text-input  {
+    max-width: 100%; 
+  }
+}
 
-        .f-s-p{
-          color: var(--primary-one, #244497);
-          text-align: center;
-          font-family: Almarai;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
+.control-div{
+  display: flex;
+  justify-content: right;
 
-        .f-s-b{
-          text-align: right !important;
-        }
-        
-        .phone-flag-box{
-          border-radius: 8px;
-          border: 1px solid var(--text, #5E718D);
-          padding: 4px 8px;
-        }
-        
-        .phone-flag-box h1{
-          margin-right: 12px;
-        }
-      }
+}
 
-      .more-det{
-        display: none;
-      }
+.h-button-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  align-items: right;
+  width: 437px;
+}
 
-      @media (min-width:701px){
-        .every-phone{
-          display: none;
-        }
-      }
-      @media (min-width:1500px){
-        .more-det{
-          display: unset;
-        }
-      }
-    </style>
-    
-    
-    <style>
-      .progress-container {
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       position: relative;
-       margin: 20px;
-       padding: 0;
-     }
-   
-     .step {
-       text-align: center;
-       width: 20%;
-       position: relative;
-     }
-   
-     .step::before,
-     .step::after {
-       content: '';
-       position: absolute;
-       top: 40%;
-       transform: translateY(-50%);
-       height: 1px;
-       background: #ccc;
-     }
-   
-     .step::before {
-       right: 50%;
-       width: 100%;
-       z-index: 1;
-     }
-   
-     .step:first-child::before {
-       content: none;
-     }
-   
-     .step::after {
-       left: 50%;
-       width: 100%;
-       z-index: 1;
-     }
-   
-     .step:last-child::after {
-       content: none;
-     }
-   
-     .step.active::before,
-     .step.active::after {
-       background: #F06030;
-     }
-   
-     .step.active .icon {
-       border-color: #244497;
-     }
-   
-     .step .icon {
-       width: 48px;
-       height: 48px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       /* border: 2px solid #F06030; */
-       border-radius: 50%;
-       background: white;
-       color: #ccc;
-       z-index: 2;
-       position: relative;
-       margin: 0 auto;
-     }
-   
-     .step.active .icon {
-       color: white;
-       background: #244497;
-       border-color: #244497;
-     }
-   
-     .step .text {
-       color: #ccc;
-       display: block;
-       margin-top: 8px;
-     }
-   
-     .step.active .text {
-       color: #244497;
-     }
-     
-     .icon svg {
-       fill: #244497;
-     }
-     
-     .icon.active svg path {
-       stroke: white;
-     }
-  
-    .working-on .icon{
-      border: 1px solid #5E718D !important;
-     }
-  
-    #grayed{
-      color: #5E718D !important;
-     }
-     
+.g-in{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: unset;
+}
+
+.g-in p{
+  margin: unset;
+  margin-right: 8px;
+
+}
+
+.one-line-r{
+  display: flex;
+  justify-content: right;
+  gap: 100px;
+}
+
+  .blue-btn{
+    background-color: #244497;
+    border: none;
+    color: white;
+    width: 346px;
+    height: 48px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+  }
+
+  .form-father .profile-picture{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .add-p-i{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap:20px;
+  }
+
+  .l-i{
+    font-size: 32px;
+    color: #244497;
+  }
+
+  .l-p{
+    margin-top: 50px;
+    font-size: 24px;
+    color: #244497;
+
+  }
+
+  .form-head{
+    color: #244497;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
    </style>
   </head>
 <body>
@@ -431,10 +170,100 @@
 </nav>
 </header>
 
+<div class="form-father" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<div class="form-cont">
+
+  <div class="f-t-e-h">
+    <h1 class="l-i">تسجيل حساب جديد </h1>
+    <h3 class="l-p">اضف صورة للملف الشخصي </h3>
+  </div>
+
+  <div class="add-p-i">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="mix-blend-mode:luminosity">
+      <path d="M12 8.00012L4 16.0001V20.0001L8 20.0001L16 12.0001M12 8.00012L14.8686 5.13146L14.8704 5.12976C15.2652 4.73488 15.463 4.53709 15.691 4.46301C15.8919 4.39775 16.1082 4.39775 16.3091 4.46301C16.5369 4.53704 16.7345 4.7346 17.1288 5.12892L18.8686 6.86872C19.2646 7.26474 19.4627 7.46284 19.5369 7.69117C19.6022 7.89201 19.6021 8.10835 19.5369 8.3092C19.4628 8.53736 19.265 8.73516 18.8695 9.13061L18.8686 9.13146L16 12.0001M12 8.00012L16 12.0001" stroke="#196FF0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      </svg>
+
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g style="mix-blend-mode:luminosity">
+        <path d="M6 6V17.8C6 18.9201 6 19.4798 6.21799 19.9076C6.40973 20.2839 6.71547 20.5905 7.0918 20.7822C7.5192 21 8.07899 21 9.19691 21H14.8031C15.921 21 16.48 21 16.9074 20.7822C17.2837 20.5905 17.5905 20.2839 17.7822 19.9076C18 19.4802 18 18.921 18 17.8031V6M6 6H8M6 6H4M8 6H16M8 6C8 5.06812 8 4.60241 8.15224 4.23486C8.35523 3.74481 8.74432 3.35523 9.23438 3.15224C9.60192 3 10.0681 3 11 3H13C13.9319 3 14.3978 3 14.7654 3.15224C15.2554 3.35523 15.6447 3.74481 15.8477 4.23486C15.9999 4.6024 16 5.06812 16 6M16 6H18M18 6H20" stroke="#FF443A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        </svg>
+        
+        <img src="https://via.placeholder.com/100" alt="profile picture" class="profile-picture
+        ">
+      
+  </div>
+
+  <h3 class="form-head">البيانات الشخصية</h3>
+  <div class="form">
+    <div class="right-form">
+      <label for="">
+        الاسم الكامل 
+        <input type="text" name="" id="" class="text-input">
+      </label>
+      <label for="">
+        رقم الهاتف
+        <input type="text" name="" id="" class="text-input">
+      </label>
+      <label for="">
+        البريد الالكتروني
+        <input type="text" name="" id="" class="text-input">
+      </label>
+      <label for="">
+        الجنسية
+        <input type="text" name="" id="" class="text-input">
+      </label>
+    </div>
+
+    <div class="left-form">
+      <label for="">
+        رقم الهوية 
+        <input type="text" name="" id="" class="text-input">
+      </label>
+      <label for="">
+        رقم الهاتف الثانوي
+        <input type="text" name="" id="" class="text-input">
+      </label>
+      <label for="">
+        تاريخ الميلاد
+        <input type="text" name="" id="" class="text-input">
+      </label>
+      <label for="">
+        الحالة الاجتماعية
+        <input type="text" name="" id="" class="text-input">
+      </label>
+    </div>
 
 
- 678
 
+  </div>
+<div class="control-div">
+    <div class="h-button-cont">
+
+      <h3 class="grayed">
+        النوع
+      </h3>
+
+
+        <div class="one-line-r">
+        <div class="g-in">
+          <p class="g">انثي</p>
+          <input type="radio" name="" id="">
+        </div>
+        <div class="g-in">
+          <p class="g">ذكر</p>
+          <input type="radio" name="" id="">
+        </div>
+      </div>
+        <button class="blue-btn">سجل</button>
+      
+      
+    </div>
+  </div>
+</div>
+</div>
 
 <footer class="footer">
             
@@ -497,7 +326,7 @@
 </footer>
 
 
-  <script src="login-script.js"></script>
+<script src="login-script.js"></script>
 <script src="https://kit.fontawesome.com/cc21bd89d5.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
