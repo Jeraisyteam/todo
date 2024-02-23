@@ -146,6 +146,55 @@
 .profile-picture{
   border-radius: 50%;
 }
+.rounded-text-div{
+  flex-wrap: wrap;
+}
+@media (max-width:700px) {
+        .every-pc{
+          display: none;
+        }
+
+        .flex-line-div{
+          display: flex;
+          align-items: center;
+          flex-direction: row-reverse;
+          gap: 16px;
+        }
+
+        .price-card-ser {
+          width: 340px !important;
+        }
+
+        .space-bet-txt-price{
+          flex-direction: column-reverse;
+        }
+
+        .one-line-div{
+          flex-direction: column;
+        }
+        .b-g-txt{
+          width: unset ;
+        }
+
+        .orange-price{
+          display: flex;
+          flex-direction: row;
+          align-items: center; 
+          gap: 10px;
+        }
+
+        .orange-price span{
+          color: #F06030;
+          font-weight: 700; 
+        }
+
+      }
+
+      @media (min-width:701px){
+        .every-phone{
+          display: none;
+        }
+      }
   </style>
   </head>
 <body>
@@ -186,7 +235,7 @@
 
 
 <div class="the-centring-div">
-  <div class="the-centered-div">
+  <div class="the-centered-div every-pc">
 
     <div class="one-line">
       <p class="blue-txt">نوع الخدمه عاملة منزلية </p>
@@ -211,7 +260,7 @@
           <p class="t">الجنسية
             :<span>كينيا</span>
           </p>
-          <div class="stars-texts" style="display: flex;">
+          <div class="stars-texts" style="display: flex; flex-direction: row-reverse;">
             <p class="rate">
               : التقييم
             </p>
@@ -344,6 +393,154 @@
     </div>
   </div>
   </div>
+
+  <div class="the-centered-div every-phone">
+    <div class="txt-top-div">
+      <p class="s-blue-txt">
+        نوع الخدمه عاملة منزلية
+      </p>
+      <p class="small-g-t">عاملات مدربات باحترافيه عاليه تحت اشراف أكاديمية نجدة</p>
+    </div>
+    <div class="flex-line-div">
+      <div class="image-div">
+      <img src="https://via.placeholder.com/100" alt="profile picture" class="profile-picture">
+    </div>
+    <div class="txt-stars-div">
+      <p class="n-blue-txt">ASHA CHULA DZOGA</p>
+      <div class="stars-texts" style="display: flex; flex-direction: row-reverse;">
+        <p class="rate">
+          : التقييم
+        </p>
+        <svg width="80" height="25" viewBox="0 0 80 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.15327 6.83781L10.3266 9.18448C10.4866 9.51115 10.9133 9.82448 11.2733 9.88448L13.3999 10.2378C14.7599 10.4645 15.0799 11.4511 14.0999 12.4245L12.4466 14.0778C12.1666 14.3578 12.0133 14.8978 12.0999 15.2845L12.5733 17.3311C12.9466 18.9511 12.0866 19.5778 10.6533 18.7311L8.65994 17.5511C8.29994 17.3378 7.70661 17.3378 7.33994 17.5511L5.34661 18.7311C3.91994 19.5778 3.05327 18.9445 3.42661 17.3311L3.89994 15.2845C3.98661 14.8978 3.83327 14.3578 3.55327 14.0778L1.89994 12.4245C0.926606 11.4511 1.23994 10.4645 2.59994 10.2378L4.72661 9.88448C5.07994 9.82448 5.50661 9.51115 5.66661 9.18448L6.83994 6.83781C7.47994 5.56448 8.51994 5.56448 9.15327 6.83781Z" fill="#FCD227"/>
+          <path d="M25.1533 6.83781L26.3266 9.18448C26.4866 9.51115 26.9133 9.82448 27.2733 9.88448L29.3999 10.2378C30.7599 10.4645 31.0799 11.4511 30.0999 12.4245L28.4466 14.0778C28.1666 14.3578 28.0133 14.8978 28.0999 15.2845L28.5733 17.3311C28.9466 18.9511 28.0866 19.5778 26.6533 18.7311L24.6599 17.5511C24.2999 17.3378 23.7066 17.3378 23.3399 17.5511L21.3466 18.7311C19.9199 19.5778 19.0533 18.9445 19.4266 17.3311L19.8999 15.2845C19.9866 14.8978 19.8333 14.3578 19.5533 14.0778L17.8999 12.4245C16.9266 11.4511 17.2399 10.4645 18.5999 10.2378L20.7266 9.88448C21.0799 9.82448 21.5066 9.51115 21.6666 9.18448L22.8399 6.83781C23.4799 5.56448 24.5199 5.56448 25.1533 6.83781Z" fill="#FCD227"/>
+          <path d="M41.1533 6.83781L42.3266 9.18448C42.4866 9.51115 42.9133 9.82448 43.2733 9.88448L45.3999 10.2378C46.7599 10.4645 47.0799 11.4511 46.0999 12.4245L44.4466 14.0778C44.1666 14.3578 44.0133 14.8978 44.0999 15.2845L44.5733 17.3311C44.9466 18.9511 44.0866 19.5778 42.6533 18.7311L40.6599 17.5511C40.2999 17.3378 39.7066 17.3378 39.3399 17.5511L37.3466 18.7311C35.9199 19.5778 35.0533 18.9445 35.4266 17.3311L35.8999 15.2845C35.9866 14.8978 35.8333 14.3578 35.5533 14.0778L33.8999 12.4245C32.9266 11.4511 33.2399 10.4645 34.5999 10.2378L36.7266 9.88448C37.0799 9.82448 37.5066 9.51115 37.6666 9.18448L38.8399 6.83781C39.4799 5.56448 40.5199 5.56448 41.1533 6.83781Z" fill="#FCD227"/>
+          <path d="M57.1533 6.83781L58.3266 9.18448C58.4866 9.51115 58.9133 9.82448 59.2733 9.88448L61.3999 10.2378C62.7599 10.4645 63.0799 11.4511 62.0999 12.4245L60.4466 14.0778C60.1666 14.3578 60.0133 14.8978 60.0999 15.2845L60.5733 17.3311C60.9466 18.9511 60.0866 19.5778 58.6533 18.7311L56.6599 17.5511C56.2999 17.3378 55.7066 17.3378 55.3399 17.5511L53.3466 18.7311C51.9199 19.5778 51.0533 18.9445 51.4266 17.3311L51.8999 15.2845C51.9866 14.8978 51.8333 14.3578 51.5533 14.0778L49.8999 12.4245C48.9266 11.4511 49.2399 10.4645 50.5999 10.2378L52.7266 9.88448C53.0799 9.82448 53.5066 9.51115 53.6666 9.18448L54.8399 6.83781C55.4799 5.56448 56.5199 5.56448 57.1533 6.83781Z" fill="#FCD227"/>
+          <path d="M73.1533 6.83781L74.3266 9.18448C74.4866 9.51115 74.9133 9.82448 75.2733 9.88448L77.3999 10.2378C78.7599 10.4645 79.0799 11.4511 78.0999 12.4245L76.4466 14.0778C76.1666 14.3578 76.0133 14.8978 76.0999 15.2845L76.5733 17.3311C76.9466 18.9511 76.0866 19.5778 74.6533 18.7311L72.6599 17.5511C72.2999 17.3378 71.7066 17.3378 71.3399 17.5511L69.3466 18.7311C67.9199 19.5778 67.0533 18.9445 67.4266 17.3311L67.8999 15.2845C67.9866 14.8978 67.8333 14.3578 67.5533 14.0778L65.8999 12.4245C64.9266 11.4511 65.2399 10.4645 66.5999 10.2378L68.7266 9.88448C69.0799 9.82448 69.5066 9.51115 69.6666 9.18448L70.8399 6.83781C71.4799 5.56448 72.5199 5.56448 73.1533 6.83781Z" fill="#FCD227"/>
+          </svg>
+          <p class="rating-txt">5/5</p>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="flex-line-div">
+
+      <div class="txt-div">
+     <p class="gray-txt">الديانة: غير ذلك</p>
+     <p class="gray-txt">الجنسية: كينيا </p>
+     
+  
+    </div>
+
+    <div class="txt-div">
+    <p class="gray-txt">العمر: ٢٥ سنة</p>
+     <p class="gray-txt">الخبرة: ٦ سنين و ٩ اشهر</p>
+    </div>
+
+    </div>
+
+    <div class="rounded-text-div">
+      <p class="rounded-text">القيام بمهام المنزل اليومية</p>
+      <p class="rounded-text">حاصلة علي التدريب</p>
+      <p class="rounded-text">الغسيل</p>
+      <p class="rounded-text">التنظيف</p>
+      <p class="rounded-text">كي الملابس</p>
+      <p class="rounded-text">محصن</p>
+    </div>
+
+
+    <div class="the-father-of-prices">
+      <div class="price-card-ser">
+        <div class="space-bet-txt-price">
+          <div class="txt-bet">
+            <p class="blue-txt">باقة نجدة</p>
+            <p class="b-g-txt">باقة النجدة تمكنك من تجربة العاملة المقيمة لمدة ٦ ساعات قبل اتمام التعاقد</p>
+            <p class="gray-txt">نافذة الوصول من الساعة  ١٠ صباحا حتي الساعة ١٤ مساءا</p>
+          </div>
+          <div class="price-for-card">
+            <p class="price-intro">سعر الباقة</p>
+            <p class="orange-price">
+              <span class="currency">ريال</span>
+              <span class="amount">200</span>
+            </p>
+            
+         
+          </div>
+  
+        </div>
+        <div class="one-line-div">
+          <p class="get-from price-line">الاستلام من اقرب نقطة توصيل</p>
+          <p class="price-delivery price-line">التوصيل للمنزل (تكلفة 0.0 ريال )</p>
+        </div>
+      </div>
+      <div class="price-card-ser">
+        <div class="space-bet-txt-price">
+          <div class="txt-bet">
+            <p class="blue-txt">باقة نجدة</p>
+            <p class="b-g-txt">باقة النجدة تمكنك من تجربة العاملة المقيمة لمدة ٦ ساعات قبل اتمام التعاقد</p>
+            <p class="gray-txt">نافذة الوصول من الساعة  ١٠ صباحا حتي الساعة ١٤ مساءا</p>
+          </div>
+          <div class="price-for-card">
+            <p class="price-intro">سعر الباقة</p>
+            <p class="orange-price">
+              <span class="currency">ريال</span>
+              <span class="amount">200</span>
+            </p>
+          </div>
+  
+        </div>
+        <div class="one-line-div">
+          <p class="get-from price-line">الاستلام من اقرب نقطة توصيل</p>
+          <p class="price-delivery price-line">التوصيل للمنزل (تكلفة 0.0 ريال )</p>
+        </div>
+      </div>
+      <div class="price-card-ser">
+        <div class="space-bet-txt-price">
+          <div class="txt-bet">
+            <p class="blue-txt">باقة نجدة</p>
+            <p class="b-g-txt">باقة النجدة تمكنك من تجربة العاملة المقيمة لمدة ٦ ساعات قبل اتمام التعاقد</p>
+            <p class="gray-txt">نافذة الوصول من الساعة  ١٠ صباحا حتي الساعة ١٤ مساءا</p>
+          </div>
+          <div class="price-for-card">
+            <p class="price-intro">سعر الباقة</p>
+            <p class="orange-price">
+              <span class="currency">ريال</span>
+              <span class="amount">200</span>
+            </p>
+          </div>
+  
+        </div>
+        <div class="one-line-div">
+          <p class="get-from price-line">الاستلام من اقرب نقطة توصيل</p>
+          <p class="price-delivery price-line">التوصيل للمنزل (تكلفة 0.0 ريال )</p>
+        </div>
+      </div>
+      <div class="price-card-ser">
+        <div class="space-bet-txt-price">
+          <div class="txt-bet">
+            <p class="blue-txt">باقة نجدة</p>
+            <p class="b-g-txt">باقة النجدة تمكنك من تجربة العاملة المقيمة لمدة ٦ ساعات قبل اتمام التعاقد</p>
+            <p class="gray-txt">نافذة الوصول من الساعة  ١٠ صباحا حتي الساعة ١٤ مساءا</p>
+          </div>
+          <div class="price-for-card">
+            <p class="price-intro">سعر الباقة</p>
+            <p class="orange-price">
+              <span class="currency">ريال</span>
+              <span class="amount">200</span>
+            </p>
+          </div>
+  
+        </div>
+        <div class="one-line-div">
+          <p class="get-from price-line">الاستلام من اقرب نقطة توصيل</p>
+          <p class="price-delivery price-line">التوصيل للمنزل (تكلفة 0.0 ريال )</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 
 
 </div>
