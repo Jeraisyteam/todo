@@ -92,7 +92,7 @@
     align-items: center;
     position: fixed;
     background-color:white;
-    top: 60px; /* Adjust based on your header height */
+    top: 140px; /* Adjust based on your header height */
   bottom: 60px; /* Adjust based on your footer height */
   left: 0;
   overflow-y: auto;
@@ -637,7 +637,53 @@
         }
       }
   </style>
+    <style>
+      .ways-to-pay{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .installments-cont p{
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+      }
+      .installments-cont{
+        
+        flex-direction: row-reverse;
+      } 
+        .dsa{
+        display: flex;
+        align-items: center;
+        flex-direction:row-reverse;
+        gap: 8px;
+       }
+ 
+       .p-orange{
+        
+        font-size: 16px !important;
+        font-weight: 600;
+        color: #F06030;
+       }
+       .pop-txt{
+        font-size: 18px;
+        font-weight: 700;
+        color: #5E718D;
+       }
+       .l-p-h{
+        color: #244497 !important;
+       }
 
+       .blue-btn{
+        width: 100%;
+        border: none;
+        color: white;
+        background-color: #244497;
+        border-radius: 8px;
+        padding:10px 0px;
+        margin-top: 10px;
+       }
+    </style>
   </head>
 <body>
   
@@ -836,43 +882,7 @@
         
     </div>
 
-    <style>
-      .ways-to-pay{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-      }
-      .installments-cont p{
-        font-size: 14px;
-        padding: 0;
-        margin: 0;
-      }
-      .installments-cont{
-        
-        flex-direction: row-reverse;
-      } 
-        .dsa{
-        display: flex;
-        align-items: center;
-        flex-direction:row-reverse;
-        gap: 8px;
-       }
- 
-       .p-orange{
-        
-        font-size: 16px !important;
-        font-weight: 600;
-        color: #F06030;
-       }
-       .pop-txt{
-        font-size: 18px;
-        font-weight: 700;
-        color: #5E718D;
-       }
-       .l-p-h{
-        color: #244497 !important;
-       }
-    </style>
+
     <div class="installments-cont">
       <div class="dsa">
         <input type="radio" name="" id="">
@@ -889,6 +899,8 @@
     </div>
   </div>
 </div>
+<button class="blue-btn">المتابعة للدفع</button>
+
 </div>
 </div>
 
