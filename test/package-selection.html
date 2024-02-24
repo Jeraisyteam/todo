@@ -63,21 +63,14 @@
         text-align: right;
       }
 
-      .every-pc{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 30vh;
-      }
 
 
       .total-cont{
         width: 593px;
         border: 1px solid #5E718D;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;  
+        align-items: center; 
         height: 100px;
         margin-top: 20px;
         border-radius: 8px;
@@ -525,110 +518,7 @@
       text-align: center;
     }
     </style>
-    
-      <style>
-    .progress-container {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     position: relative;
-     margin: 20px;
-     padding: 0;
-   }
- 
-   .step {
-     text-align: center;
-     width: 20%;
-     position: relative;
-   }
- 
-   .step::before,
-   .step::after {
-     content: '';
-     position: absolute;
-     top: 40%;
-     transform: translateY(-50%);
-     height: 1px;
-     background: #ccc;
-   }
- 
-   .step::before {
-     right: 50%;
-     width: 100%;
-     z-index: 1;
-   }
- 
-   .step:first-child::before {
-     content: none;
-   }
- 
-   .step::after {
-     left: 50%;
-     width: 100%;
-     z-index: 1;
-   }
- 
-   .step:last-child::after {
-     content: none;
-   }
- 
-   .step.active::before,
-   .step.active::after {
-     background: #F06030;
-   }
- 
-   .step.active .icon {
-     border-color: #244497;
-   }
- 
-   .step .icon {
-     width: 48px;
-     height: 48px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     /* border: 2px solid #F06030; */
-     border-radius: 50%;
-     background: white;
-     color: #ccc;
-     z-index: 2;
-     position: relative;
-     margin: 0 auto;
-   }
- 
-   .step.active .icon {
-     color: white;
-     background: #244497;
-     border-color: #244497;
-   }
- 
-   .step .text {
-     color: #ccc;
-     display: block;
-     margin-top: 8px;
-   }
- 
-   .step.active .text {
-     color: #244497;
-   }
-   
-   .icon svg {
-     fill: #244497;
-   }
-   
-   .icon.active svg path {
-     stroke: white;
-   }
 
-  .working-on .icon{
-    border: 1px solid #5E718D !important;
-   }
-
-  #grayed{
-    color: #5E718D !important;
-   }
-   
- </style>
 
   </head>
 <body>
@@ -981,6 +871,7 @@
       <h1 class="addr">Al Har Al Tamimi</h1>
       <p class="address-par">Princess Noura Bint Abdul Rahman - 7264 - Al Fasall Street</p>
       <h3 class="nationalty"> الجنسية:اندونيسيا</h3>
+      <h3 class="nationalty gray-txt" style="margin-top: 20px;"> تاريخ الزيارة: الخميس الموافق ٢٤ من ديسمبر</h3>
     </div>
   </div>
 </div>
