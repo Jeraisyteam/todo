@@ -1885,7 +1885,9 @@ line-height: 160%;
   
   @media (min-width: 769px) {
 
-
+.phone-services{
+  display: none;
+}
 
     .phone-res-serv{
       display: none !important;
@@ -1958,9 +1960,7 @@ line-height: 160%;
       font-style: normal;
       font-weight: 800;
       line-height: 160%;
-    }  .phone-services {
-        display: none !important;
-      }
+    } 
 
     .text-2 p{
       
