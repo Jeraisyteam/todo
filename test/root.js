@@ -50,7 +50,8 @@ export class Header extends Component {
 }
 
 export class Footer  extends Component{
-static template = xml`    <footer class="footer">
+static template = xml`   
+ <footer class="footer">
 
 <div class="subscribe-email-main">
 <h1>اشترك في القائمة البريدية للحصول على آخر العروض والأخبار</h1>
@@ -613,7 +614,9 @@ static template=xml`
 <li>توفير عاملة مدربة وماهرة </li>
 <li>ساعات مرنة وفقا لاحتياجك</li> 
 <div class="btn-div">
+<a href="address.html">
 <button class="btn-2">احجز الان</button>
+</a>
 <button class="btn-1">حمل التطبيق</button>
 </div>
 </ul>
@@ -645,7 +648,9 @@ static template=xml`
 <li>توفير عاملة مدربة وماهرة لتولي نظافة المنزل</li>
 <li> استلام العاملة من نقاط مختلفه وبسرعة</li> 
 <div class="btn-div">
+<a href="address.html">
 <button class="btn-2">احجز الان</button>
+</a>
 <button class="btn-1">حمل التطبيق</button>
 </div>
 </ul>
@@ -979,7 +984,9 @@ line-height: 160%; ">خدمات المقيمة</h1>
 <li>توفير عاملة مدربة وماهرة لتولي نظافة المنزل</li>
 <li> استلام العاملة من نقاط مختلفه وبسرعة</li> 
 <div class="btn-div">
+<a href="address.html">
 <button class="btn-2">احجز الان</button>
+</a>
 <button class="btn-1">حمل التطبيق</button>
 </div>
 </ul>
