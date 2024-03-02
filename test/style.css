@@ -4389,6 +4389,67 @@ footer{
           flex-direction: row-reverse;
           align-items: flex-end; /* Aligns items horizontally to the end */
         }
+ 
+
+      .contract-line{
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        /* border: 1px solid; */
+        margin-top: 30px;
+      }
+      .on-top-each{
+        margin-right: 10px;
+      }
+
+      .contract-line .one-line p{
+        margin-right: 15px;
+      }
+
+
+      .on-top-each{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content-co{
+           display: flex;
+        flex-direction: row-reverse;
+        /* justify-content: space-between; */
+      }
+
+      .contract-cont{
+        display: flex;
+        justify-content: space-between;
+        width: 858px;
+        border: 1px solid #244497;
+        padding: 16px;
+        border-radius: 16px;
+        /* height: 128px; */
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+
+      .all-cont-di{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        margin-right: 20px;
+      }
+
+      .green{
+        background-color: #B6F8C5;
+        padding: 12px;
+        border-radius: 16px;
+        color: #244497;
+      }   
+      
+      
       @media (max-width: 900px) {
         #aligned { /* Assuming the ID is `aligned` and not `aligined` */
           flex-direction: column;
@@ -4406,5 +4467,31 @@ footer{
     width: 100%  !important;
     height: 100% !important;
       }
+
       }
-      
+
+      @media (max-width: 800px) {
+        .image-cont .profile-picture {
+            display: none;
+        }
+
+        .contract-cont{
+          width: 100%;
+        }
+
+        .all-cont-di{
+          justify-content: center;
+        }
+
+        .sm-gray-txt{
+          font-size: 11px;
+        }
+
+        .contract-line{
+          flex-direction: column-reverse;
+          justify-content: right;
+          align-self: right;
+          text-align: right;
+        }
+    }
+    
