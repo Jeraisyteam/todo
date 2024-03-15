@@ -4630,10 +4630,11 @@ footer{
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          /* height: 100vh; */
         }
         .centering{
           width: 90%;
-          height: 100%;
+          /* height: 100%; */
          /* border: 13px solid blue; */
           /* margin-left: auto; */
       
@@ -4807,4 +4808,8 @@ footer{
 
   .d-ss{
     padding: 10px;
+  }
+
+  .accordion{
+    padding-right: 0.1%;
   }
