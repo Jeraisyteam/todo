@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -4391,7 +4395,7 @@ footer{
       #height-adj{
         height: unset !important;
       }
-  .line-right {
+      .line-right {
           display: flex;
           flex-direction: row-reverse;
           align-items: flex-end; /* Aligns items horizontally to the end */
@@ -4881,4 +4885,82 @@ footer{
 .big-txt-bold{
   font-weight: 700;
   font-size: 24px;
+}
+
+.profile-image-c-w{
+  width: 100px;
+  height: 100px;
+}
+
+.svgs-cont svg{
+  margin-left: 10px;
+}
+
+.alx-f-f{
+  font-family: Alexandria;
+}
+
+.the-rest-of-cont div{
+  padding: 2px 0px;
+}
+
+
+.all-sq-boxs{
+ 
+
+display: flex;
+ 
+
+  flex-wrap: wrap;
+}
+.the-sq-box{  
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+  align-items: center;
+  justify-content: center;
+   border-radius: 8px;
+  width: 400px;
+  height: 200px;
+   background-color: #244497;
+}
+
+.white-txt-bold{
+  color: white;
+  font-size: 24px;
+  font-family: Almarai;
+  font-weight: 700;
+}
+
+.yellow-txt{
+ color: #FCD227; 
+ font-size: 36px;
+ font-weight: 800;
+}
+
+.two-sq-boxs{
+  border-radius: 8px; 
+  border: 1px solid #5E718D;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  width: 667px;
+  height: 200px;
+  border: 1px solid;
+}
+
+.frst-sq-box,.secnd-sq-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.sm-orange-txt{
+  color: #F06030;
+  font-size: 24px;
+  font-weight: 700;
+  
 }
