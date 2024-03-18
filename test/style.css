@@ -4381,6 +4381,7 @@ footer{
         color: #244497;
         font-weight: 700;
         font-size: 24px;
+        margin: 0;
       }
 
       .sm-gray-txt{
@@ -4557,9 +4558,7 @@ footer{
   
           }
      
-          .centering{
-            
-          }
+          
   
         .green{
           margin: 0;
@@ -4655,70 +4654,7 @@ footer{
 
 
 
-  @media (max-width: 800px) {
 
-    .moderate-phone-txt{
-      font-size: 16px;
-    }
-
-    .small-phone-txt{
-      font-size: 14px;
-    }
-
-   
-
-     .spacing{
-      gap: 8px;
-    }
-
-    .one-line-space{
-      justify-content: space-between;
-      align-items:center;
-      margin: auto;
-      width: 100vw;
-      padding: 10px 50px;
-    }
-    
-    .centering{
-      padding: unset !important;
-    }
-
-    .one-line p{
-      margin: unset !important;
-    }
-
-    .custom-width{
-      width: 100%;
-    }
-
-    .green{
-         padding: 8px 10px;
-        }
-
-      .resizing-svg svg{
-      width: 100%;
-      padding-bottom: 100px;
-    }
-
-    .sle{
-      width: 100vw;
-    }
-
-
-   
-    
-    .img-txt-div{
-      width: unset;
-      text-align: right;
-      gap: 10px;
-
-    }
-     .space{ 
-      flex-direction: column;
-      gap: 10px;
-      align-items: unset;
-    }
-  }
 
   .orange-txt{
     color:#F06030
@@ -4910,7 +4846,7 @@ footer{
 
 display: flex;
  
-
+gap: 20px;
   flex-wrap: wrap;
 }
 .the-sq-box{  
@@ -4964,3 +4900,165 @@ display: flex;
   font-weight: 700;
   
 }
+
+.vertical-line {
+  border-left: 1px solid #5E718D; /* Adjust the width and color of the border as needed */
+  height: 80%; /* Adjust the height of the line as needed */
+  margin-right: 71px;
+}
+
+
+
+
+  .boxses-w-color-cont{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .boxses-c-d-w{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    gap: 25px;
+    width: 441px;
+    height: 217px;
+    background-color: #5E718D0D;
+    border:2px solid #244497 ;
+  }
+
+
+
+  .dark-white-bc{
+    background-color: #5E718D0D
+  }
+
+  .orange-bc-color-t-c{
+    color: white;
+    background-color: #F06030;
+    border-radius: 4px;
+
+  }
+
+  .nb{
+    border: none;
+  }
+
+  .wide-box-d{
+    border: 1px solid #5E718D;
+    border-radius: 8px;
+    width: 540px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding:0px 14px;
+  }
+
+  .wide-boxes-w-color{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: right;
+    margin-left: auto;
+    text-align: right;
+    align-items: right;
+  }
+
+  .p16{
+    padding: 1px 16px;
+  }
+  
+  @media (max-width: 800px) {
+
+    .moderate-phone-txt{
+      font-size: 16px;
+    }
+
+    .small-phone-txt{
+      font-size: 14px;
+    }
+
+   
+
+     .spacing{
+      gap: 8px;
+    }
+
+    .one-line-space{
+      justify-content: space-between;
+      align-items:center;
+      margin: auto;
+      width: 100vw;
+      padding: 10px 50px;
+    }
+    
+    .centering{
+      padding: unset !important;
+    }
+
+    .one-line p{
+      margin: unset !important;
+    }
+
+    .custom-width{
+      width: 100%;
+    }
+
+    .green{
+         padding: 8px 10px;
+        }
+
+      .resizing-svg svg{
+      width: 100%;
+      padding-bottom: 100px;
+    }
+
+    .sle{
+      width: 100vw;
+    }
+
+
+   
+    
+    .img-txt-div{
+      width: unset;
+      text-align: right;
+      gap: 10px;
+
+    }
+     .space{ 
+      flex-direction: column;
+      gap: 10px;
+      align-items: unset;
+    }
+
+
+
+    .vertical-line {
+      margin: 0px;
+      height: 60%;
+    }
+
+    .two-sq-boxs{
+      height: 100px;
+    }
+
+    .the-sq-box{
+      height: 130px;
+    }
+
+    .wide-boxes-w-color{
+      width: unset;
+    }
+
+    .wide-box-d{
+      width: unset;
+    }
+  }
