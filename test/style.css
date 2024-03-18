@@ -5062,3 +5062,22 @@ gap: 20px;
       width: unset;
     }
   }
+  .nav-tabs .nav-link{
+       color: #5E718D;
+       border: none;
+  }
+
+  .nav-link {
+
+}
+
+.nav-link.active {
+  border:unset !important;
+   border-bottom:2px solid #244497  !important ; /* Changing the border color for the active link */
+   color: #244497 !important;
+}
+
+
+.sle a{
+color: #5E718D ;
+}
