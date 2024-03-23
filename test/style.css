@@ -5076,6 +5076,11 @@ gap: 20px;
       margin-right: 0px;
       margin-bottom: 15px;
     }
+
+
+    .intro-h2 {
+      font-size: 24px !important;
+    } 
   }
   .nav-tabs .nav-link{
        color: #5E718D;
