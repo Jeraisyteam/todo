@@ -5072,15 +5072,17 @@ gap: 20px;
       width: unset;
     }
 
-    .about-us-2-phones .btn-2{
-      margin-right: 0px;
-      margin-bottom: 15px;
-    }
-
+  
 
     .intro-h2 {
       font-size: 24px !important;
     } 
+
+    .about-us-2-phones .btn-2{
+      margin-right: 15px;
+      margin-bottom: 0px;
+    }
+
   }
   .nav-tabs .nav-link{
        color: #5E718D;
@@ -5096,6 +5098,8 @@ gap: 20px;
    border-bottom:2px solid #244497  !important ; /* Changing the border color for the active link */
    color: #244497 !important;
 }
+
+
 
 
 .sle a{
@@ -5194,4 +5198,24 @@ color: #5E718D ;
 }
 nav{
   cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .about-us-2-phones .btn-2{
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+
+  
+}
+
+@media (min-width: 601px) {
+
+  .about-us-2-phones .btn-2{
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+
+
 }
