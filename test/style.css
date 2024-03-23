@@ -5071,6 +5071,11 @@ gap: 20px;
     .wide-box-d{
       width: unset;
     }
+
+    .about-us-2-phones .btn-2{
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
   }
   .nav-tabs .nav-link{
        color: #5E718D;
