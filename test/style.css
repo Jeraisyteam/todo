@@ -5173,3 +5173,15 @@ color: #5E718D ;
   right: 10px;
   cursor: pointer;
 }
+
+
+.dr-r{
+  border: none !important;
+}
+
+.accordion-item{
+  border: none !important;
+}
+nav{
+  cursor: pointer;
+}
