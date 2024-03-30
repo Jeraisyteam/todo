@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 
 
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&family=Almarai:wght@300;400;700&display=swap');
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -5421,8 +5424,6 @@ nav{
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;700;900&family=Almarai:wght@300;400;700&display=swap');
 .new-verification-container {
   display: flex;
   justify-content: space-around;
