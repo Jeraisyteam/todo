@@ -5656,3 +5656,17 @@ nav{
   justify-content: space-between;
   gap: 50px;
 }
+
+.nav-link{
+  background-color: none;
+}
+
+.nav-pills{
+  background-color: none !important;
+}
+
+
+
+.contracts-cont{
+  width: 96%;
+}
