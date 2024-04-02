@@ -5667,6 +5667,31 @@ nav{
 
 
 
-.contracts-cont{
+.contracts-c5ont{
   width: 96%;
+}
+
+
+
+@media screen and (max-width: 580px) {
+.middle-service,.res-serv{
+  padding: unset;
+}
+
+.img{
+  width: 400px;
+}
+.img img{
+  width: 100%;
+}
+
+
+ol, ul{
+  padding: 0px !important   ;
+}
+
+
+.phone-res-serv p{
+  width: 19rem;
+}
 }
