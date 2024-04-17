@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../todo"
+		},
+		{
+			"path": "../views"
+		},
+		{
+			"path": "../website_najdah"
+		},
+		{
+			"path": "../.vscode"
+		},
+		{
+			"path": "../__pycache__"
+		},
+		{
+			"path": "../controllers"
+		},
+		{
+			"path": "../oxp1"
+		},
+		{
+			"path": "../static"
+		}
+	]
+}
