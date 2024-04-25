@@ -1038,12 +1038,12 @@ width: 321px;
 }
 .download-app-p{
   text-align: center;
-  width: 390px !important;
+  width: 300px !important;
 }
 
 .download-app-h1{
   text-align: center;
-  width: 390px;
+  width: 340px;
 }
 
 .download-app-cont1 a{
@@ -1852,7 +1852,7 @@ line-height: 160%;
       margin-top:10px;
      }
      .phone-res-serv .contract-det li{
-      width: 23.1875rem;
+      width: 19rem;
       font-size: 1.1rem;
      } 
      .phone-res-serv .btn-div{
@@ -1866,7 +1866,7 @@ line-height: 160%;
       margin: 0 !important;
      }
     .services-texts{
-      width: 23.125rem;
+      width: 18rem;
     } 
     .services-texts svg{
       width: 3rem;
@@ -5692,7 +5692,7 @@ nav{
 }
 
 .img{
-  width: 400px;
+  /* width: 400px; */
 }
 .img img{
   width: 100%;
@@ -5705,7 +5705,7 @@ ol, ul{
 
 
 .phone-res-serv p{
-  width: 19rem;
+  width: 17rem;
 }
 }
 
