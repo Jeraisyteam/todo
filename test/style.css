@@ -5708,3 +5708,13 @@ ol, ul{
   width: 19rem;
 }
 }
+
+
+@media screen and (max-width: 700px) {
+
+  .contact-form{
+    padding: 15px ;
+
+  }
+
+}
