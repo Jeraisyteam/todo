@@ -140,7 +140,7 @@ function updateLoginUI() {
       elementsF.forEach(element => {
         const userIcon = document.createElement('a');
         userIcon.id = 'userIcon';
-        userIcon.textContent = '👤 ' + localStorage.getItem('userName');  // Use stored user name
+        userIcon.textContent = localStorage.getItem('userName') +'👤 '; // Use stored user name
         userIcon.style.borderRadius = '50%';
         userIcon.style.display = 'inline-block';  // Ensure it displays inline
 
