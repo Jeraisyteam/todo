@@ -5712,8 +5712,8 @@ ol, ul{
 
 @media screen and (max-width: 700px) {
 
-  .contact-form{
-    padding: 15px ;
+  .phones-contact-form{
+    padding: 15px !important;
 
   }
 
