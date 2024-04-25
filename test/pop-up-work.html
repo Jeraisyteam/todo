@@ -8,13 +8,12 @@
   <link rel="icon" href="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png">
   <title>pop</title>
 
- 
+  <script defer src="login-script.js"></script>
 </head>
 <body>
   
 
   <div class="all"> 
-
     <header class="main-head">
       <div class="logo navbar-brand">
           <img src="https://i.ibb.co/k063h2D/64c6d3c751f6d25838170e6610b17e14.png" alt="">
@@ -37,13 +36,13 @@
             <a class="nav-link" href="contact.html">اتصل بنا</a>
         </div>
         <div class="nav-cont-2">
-            <a href="#" class="nav-link login-color" style="color: #244497 !important;">تسجيل الدخول</a>
+            <a href="#" id="openLoginModal" onclick="showModal('loginModal')" style="display:none;" class="nav-link login-color" style="color: #244497 !important;">تسجيل الدخول</a>
             <a href="#" class="nav-link download-btn">حمل التطبيق</a>
         </div>
     </div>
   </nav>
   </header>
-
+  
 
 
 <div class="pop-up-py" id="height-adj">
