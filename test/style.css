@@ -686,7 +686,7 @@ align-items: center;
 justify-content: center;
 position: absolute;
 left:-5px;
-bottom: 10;
+bottom: 0;
 z-index: 10000000000;
 }
 
