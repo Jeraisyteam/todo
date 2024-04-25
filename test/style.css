@@ -1747,7 +1747,7 @@ line-height: 140%;
 
 .contract-det li{
   color: var(--text, #5E718D);
-text-align: right;
+text-align: center;
 font-family: Almarai;
 font-size: 20px;
 font-style: normal;
