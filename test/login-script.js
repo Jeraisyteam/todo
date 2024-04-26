@@ -101,7 +101,7 @@ function login(phoneNumber) {
   .then(result => {
       if (result && result.result && result.result.success) {
           localStorage.setItem('loginData', JSON.stringify(result.result.data));
-          console.log("OTP Code: ", result.result.data.verification_code);
+          alert("OTP Code: ", result.result.data.verification_code);
           showModal('smsVerificationModal');
       } else {
           alert("Login failed: " + (result.result.message || "Unknown error"));
