@@ -97,21 +97,26 @@ function login(phoneNumber) {
   const requestOptions = { method: "POST", headers: myHeaders, body: raw, redirect: "follow" };
 
   fetch("https://test.najdah.app/jer/api/v1/client/easy/login", requestOptions)
-  .then(response => response.json())
-  .then(result => {
-      if (result && result.result && result.result.success) {
-          localStorage.setItem('loginData', JSON.stringify(result.result.data));
-          alert("OTP Code: ", result.result.data.verification_code);
-          showModal('smsVerificationModal');
-      } else {
-          alert("Login failed: " + (result.result.message || "Unknown error"));
-      }
-  })
-  .catch(error => {
-      console.error('Error during login:', error);
-      alert('Login error: ' + error.message);
-  });
+    .then(response => response.json())
+    .then(result => {
+        if (result && result.result && result.result.success) {
+            localStorage.setItem('loginData', JSON.stringify(result.result.data));
+            // Log and alert the OTP code
+            const otpCode = result.result.data.verification_code;
+            console.log("Your OTP Code is: " + otpCode); // Logging the OTP to the console
+            alert("Your OTP Code is: " + otpCode); // Alerting the OTP to the user
+            // Show the SMS verification modal if you still need to ask for OTP input
+            showModal('smsVerificationModal');
+        } else {
+            alert("Login failed: " + (result.result.message || "Unknown error"));
+        }
+    })
+    .catch(error => {
+        console.error('Error during login:', error);
+        alert('Login error: ' + error.message);
+    });
 }
+
 
 function sendOtp() {
   const otpInputs = document.querySelectorAll('.new-verification-box');
