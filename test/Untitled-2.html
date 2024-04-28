@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and SMS Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Button to open the login modal -->
+<button id="openLoginModal" onclick="showModal('loginModal')">Open Login</button>
+
+<!-- The Modal -->
+<div id="loginModal" class="modal" style="display: none;">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2 class="box-head">بدء تسجيل الدخول او التسجيل لحجز الخدمة</h2>
+    <div class="label-input">
+      <label for="phone" class="label-phone">رقم الهاتف</label>
+      <div class="phone-input-container">
+        <select class="flag-dropdown" id="country-flag-dropdown" onchange="updateCountryCode()">
+          <option value="+1" data-country-code="US">🇺🇸</option>
+          <option value="+91" data-country-code="IN">🇮🇳</option>
+          <option value="+966" data-country-code="SA" selected>SA</option>
+        </select>
+        <div class="vertical-line"></div>
+        <span class="country-code" id="dial-code">+966</span>
+        <div class="editable-part" contenteditable="true" id="editable-part"></div>
+      </div>
+    </div>
+    <button type="submit" class="btn blue" onclick="startLoginProcess()">تسجيل الدخول</button>
+    <button type="button" class="btn orange" onclick="closeModal('loginModal')">تسجيل الدخول كزائر</button>
+    <p class="problem-text">نواجه مشكلة في تسجيل الدخول؟ <span class="problem-contact">اتصل بنا</span></p>
+  </div>
+</div>
+
+<!-- SMS Verification Box -->
+<div id="smsVerificationModal" class="modal" style="display:none;">
+  <!-- Modal content -->
+  <div class="new-modal-content">
+    <span class="close" onclick="closeModal('smsVerificationModal')">&times;</span>
+    <h2 class="new-box-head">رمز التحقيق</h2>
+    <p class="new-problem-text">الرجاء ادخال الرمز المرسل علي الرقم</p>
+    <div class="new-verification-container">
+      <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+      <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+      <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+      <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
+    </div>
+    <button type="submit" class="new-btn new-blue" onclick="sendOtp()">تاكيد</button>
+    <div class="new-one-line-p">
+      <p class="new-problem-text">لم يصلك الكود. <span class="new-problem-contact">اعد ارسال الكود</span></p>
+      <span class="new-problem-contact">تعديل رقم الجوال</span>
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.new-verification-box').forEach((input, idx, inputs) => {
+    input.addEventListener('input', () => {
+        if (input.value.length === 1 && idx < inputs.length - 1) {
+            inputs[idx + 1].focus();
+        }
+    });
+});
+
+function checkLoginState() {
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        updateLoginUI();
+    } else {
+        document.getElementById('openLoginModal').style.display = 'block';
+    }
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+function showModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function startLoginProcess() {
+    var phoneNumber = document.getElementById("editable-part").innerText.trim();
+    var fullPhoneNumber = document.getElementById('dial-code').textContent + phoneNumber;
+    document.querySelector('.new-problem-text').textContent = `الرجاء ادخال الرمز المرسل علي الرقم ${fullPhoneNumber}`;
+    login(fullPhoneNumber);
+}
+
+function login(phoneNumber) {
+    const myHeaders = new Headers();
+    myHeaders.append("Appname", "najdah");
+    myHeaders.append("Content-Type", "application/json");
+    // myHeaders.append("Cookie", "session_id=f825a27b36702159440db67f1742f02ab72f105c");
+
+    const raw = JSON.stringify({
+      "login": phoneNumber.replace('+', '')
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+
+    fetch("https://najdah.najdahksa.com/jer/api/v1/client/easy/login", requestOptions)
+    .then(response => response.json())
+    .then(result => {
+        if (result && result.result && result.result.success) {
+            localStorage.setItem('loginData', JSON.stringify(result.result.data));
+            showModal('smsVerificationModal'); // Show the OTP modal only on success
+        } else {
+            alert("Login failed: " + (result.message || "Unknown error"));
+        }
+    })
+    .catch(error => {
+        console.error('Error during login:', error);
+        alert('Login error: ' + error.message);
+    });
+}
+
+function sendOtp() {
+    const otpInputs = document.querySelectorAll('.new-verification-box');
+    const otpCode = Array.from(otpInputs).reduce((code, input) => code + input.value.trim(), '');
+    const loginData = JSON.parse(localStorage.getItem('loginData'));
+
+    // Assuming we store the correct OTP in loginData for validation, otherwise it needs another API call
+    if (otpCode === loginData.verification_code) {
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userPhone', loginData.login);
+        updateLoginUI();
+        window.location.reload(); // Refresh page on successful login
+    } else {
+        alert("Incorrect OTP entered. Please try again.");
+    }
+}
+
+function updateLoginUI() {
+    document.getElementById('openLoginModal').style.display = 'none';
+    const userIcon = document.createElement('div');
+    userIcon.id = 'userIcon';
+    userIcon.textContent = '👤 Logged In';
+    userIcon.style.borderRadius = '50%';
+    document.body.appendChild(userIcon);
+    const phoneNumberDisplay = document.createElement('span');
+    phoneNumberDisplay.textContent = localStorage.getItem('userPhone');
+    userIcon.appendChild(phoneNumberDisplay);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    checkLoginState();
+});
+</script>
+
+</body>
+</html>
