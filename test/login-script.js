@@ -1,45 +1,42 @@
 function insertLoginBox() {
   const html = `
     <div id="loginModal" class="modal" style="display:none;">
-      <!-- Modal content -->
       <div class="modal-content">
         <span class="close" onclick="closeModal('loginModal')">&times;</span>
-        <h2 class="box-head">بدء تسجيل الدخول او التسجيل لحجز الخدمة</h2>
+        <h2 class="box-head">ابدأ تسجيل الدخول أو التسجيل لحجز الخدمة</h2>
         <div class="label-input">
           <label for="phone" class="label-phone">رقم الهاتف</label>
           <div class="phone-input-container">
             <select class="flag-dropdown" id="country-flag-dropdown" onchange="updateCountryCode()">
               <option value="+1" data-country-code="US">🇺🇸</option>
               <option value="+91" data-country-code="IN">🇮🇳</option>
-              <option value="+966" data-country-code="SA" selected>SA</option>
+              <option value="+966" data-country-code="SA" selected>🇸🇦</option>
             </select>
             <div class="vertical-line"></div>
             <span class="country-code" id="dial-code">+966</span>
-            <input type="text" class="editable-part" id="editable-part" maxlength="9">
+            <input type="text" class="editable-part" id="editable-part" maxlength="9" oninput="validatePhoneNumber(this)">
           </div>
         </div>
         <button type="submit" class="btn blue" onclick="startLoginProcess()">تسجيل الدخول</button>
         <button type="button" class="btn orange" onclick="closeModal('loginModal')">تسجيل الدخول كزائر</button>
-        <p class="problem-text">نواجه مشكلة في تسجيل الدخول؟ <span class="problem-contact">اتصل بنا</span></p>
+        <p class="problem-text">هل تواجه مشكلة في تسجيل الدخول؟ <span class="problem-contact">اتصل بنا</span></p>
       </div>
     </div>
-    
-    <!-- SMS Verification Box -->
     <div id="smsVerificationModal" class="modal" style="display:none;">
       <div class="new-modal-content">
         <span class="close" onclick="closeModal('smsVerificationModal')">&times;</span>
-        <h2 class="new-box-head">رمز التحقيق</h2>
-        <p class="new-problem-text">الرجاء ادخال الرمز المرسل على الرقم</p>
+        <h2 class="new-box-head">كود التحقق</h2>
+        <p class="new-problem-text">الرجاء إدخال الرمز المرسل إلى رقمك</p>
         <div class="new-verification-container">
           <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
           <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
           <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
           <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="new-verification-box" />
         </div>
-        <button type="submit" class="new-btn new-blue" onclick="sendOtp()">تاكيد</button>
+        <button type="submit" class="new-btn new-blue" onclick="sendOtp()">تأكيد</button>
         <div class="new-one-line-p">
-          <p class="new-problem-text">لم يصلك الكود. <span class="new-problem-contact">اعد ارسال الكود</span></p>
-          <span class="new-problem-contact">تعديل رقم الجوال</span>
+          <p class="new-problem-text"><span class="new-problem-contact">إعادة إرسال الكود</span></p>
+          <span class="new-problem-contact">تعديل رقم الهاتف</span>
         </div>
       </div>
     </div>
@@ -49,13 +46,31 @@ function insertLoginBox() {
   setupEventListeners();
 }
 
+function validatePhoneNumber(input) {
+  const pattern = /^[5][0-9]{8}$/;
+  if (!pattern.test(input.value) && input.value.length === 9) {
+    alert('يجب أن يبدأ الرقم بـ 5 وأن يكون طوله 9 أرقام.');
+    input.value = ''; // إعادة تعيين الإدخال
+  }
+}
+
+function moveToNextInput(event, input) {
+  let value = input.value;
+  let next = input.nextElementSibling;
+
+  if (event.key === 'Backspace' && value === '') {
+    let previous = input.previousElementSibling;
+    if (previous && previous.classList.contains('new-verification-box')) {
+      previous.focus();
+    }
+  } else if (value.length === 1 && next && next.classList.contains('new-verification-box')) {
+    next.focus();
+  }
+}
+
 function setupEventListeners() {
-  document.querySelectorAll('.new-verification-box').forEach((input, idx, inputs) => {
-    input.addEventListener('input', () => {
-        if (input.value.length === 1 && idx < inputs.length - 1) {
-            inputs[idx + 1].focus();
-        }
-    });
+  document.querySelectorAll('.new-verification-box').forEach(input => {
+    input.addEventListener('keyup', event => moveToNextInput(event, input));
   });
 
   const loginButton = document.getElementById('openLoginModal');
@@ -66,10 +81,14 @@ function setupEventListeners() {
 
 function checkLoginState() {
   if (localStorage.getItem('isLoggedIn') === 'true') {
-      updateLoginUI();
-      document.getElementById('openLoginModal') && (document.getElementById('openLoginModal').style.display = 'none');
+    updateLoginUI();
+    if (document.getElementById('openLoginModal')) {
+      document.getElementById('openLoginModal').style.display = 'none';
+    }
   } else {
-      document.getElementById('openLoginModal') && (document.getElementById('openLoginModal').style.display = 'block');
+    if (document.getElementById('openLoginModal')) {
+      document.getElementById('openLoginModal').style.display = 'block';
+    }
   }
 }
 
@@ -82,11 +101,30 @@ function showModal(modalId) {
 }
 
 function startLoginProcess() {
-  var phoneNumber = document.getElementById("editable-part").value.trim();
-  var fullPhoneNumber = document.getElementById('dial-code').textContent + phoneNumber;
-  document.querySelector('.new-problem-text').textContent = `الرجاء ادخال الرمز المرسل على الرقم ${fullPhoneNumber}`;
+
+
+
+  var countryCode = '+966';
+var phoneNumber = '548981892';
+var fullPhoneNumber = countryCode + phoneNumber;
+console.log(fullPhoneNumber);
+  if (!/^[+][0-9]{12}$/.test(fullPhoneNumber)) {
+    alert('الرقم المدخل غير صحيح. يرجى التأكد من إدخال رقم دولي صحيح.');
+    return;
+  }
+
+  document.querySelector('.new-problem-text').textContent = `الرجاء إدخال الرمز المرسل إلى ${fullPhoneNumber}`;
+
+  const sendButton = document.querySelector('.new-btn.new-blue');
+  sendButton.disabled = true; // Disable the button
+  setTimeout(() => {
+    sendButton.disabled = false; // Enable the button after 5 seconds
+  }, 5000);
+
   login(fullPhoneNumber);
 }
+
+
 
 function login(phoneNumber) {
   const myHeaders = new Headers();
@@ -101,22 +139,19 @@ function login(phoneNumber) {
     .then(result => {
         if (result && result.result && result.result.success) {
             localStorage.setItem('loginData', JSON.stringify(result.result.data));
-            // Log and alert the OTP code
             const otpCode = result.result.data.verification_code;
-            console.log("Your OTP Code is: " + otpCode); // Logging the OTP to the console
-            alert("Your OTP Code is: " + otpCode); // Alerting the OTP to the user
-            // Show the SMS verification modal if you still need to ask for OTP input
+            console.log("رمز OTP الخاص بك هو: " + otpCode);
+            alert("رمز OTP الخاص بك هو: " + otpCode);
             showModal('smsVerificationModal');
         } else {
-            alert("Login failed: " + (result.result.message || "Unknown error"));
+            alert("فشل في تسجيل الدخول: " + (result.result.message || "خطأ غير معروف"));
         }
     })
     .catch(error => {
-        console.error('Error during login:', error);
-        alert('Login error: ' + error.message);
+        console.error('خطأ أثناء تسجيل الدخول:', error);
+        alert('خطأ في تسجيل الدخول: ' + error.message);
     });
 }
-
 
 function sendOtp() {
   const otpInputs = document.querySelectorAll('.new-verification-box');
@@ -132,31 +167,25 @@ function sendOtp() {
           window.location.href = 'signup.html';
       }
   } else {
-      alert("Incorrect OTP entered. Please try again.");
+      alert("تم إدخال OTP غير صحيح. الرجاء المحاولة مرة أخرى.");
   }
 }
 
 function updateLoginUI() {
-  // Only proceed if the user is logged in and the user icon does not already exist
   if (localStorage.getItem('isLoggedIn') === 'true' && !document.getElementById('userIcon')) {
     let elementsF = document.querySelectorAll(".nav-cont-2");
-
     if (elementsF.length > 0) {
       elementsF.forEach(element => {
         const userIcon = document.createElement('a');
         userIcon.id = 'userIcon';
-        userIcon.textContent = ' 👤  ' + localStorage.getItem('userName');  // Use stored user name
+        userIcon.textContent = '👤 ' + localStorage.getItem('userName');
         userIcon.style.borderRadius = '50%';
-        userIcon.style.display = 'inline-block';  // Ensure it displays inline
-
-        // Optionally, add attributes like href if it's supposed to be a link
-        userIcon.href = '#userProfile';  // Example link, possibly to a user profile
-
-        // Insert the user icon at the beginning of the element
+        userIcon.style.display = 'inline-block';
+        userIcon.href = '#userProfile';
         element.insertBefore(userIcon, element.firstChild);
       });
     } else {
-      console.error("No elements with class '.nav-cont-2' found.");
+      console.error("لم يتم العثور على عناصر بفئة '.nav-cont-2'.");
     }
   }
 }

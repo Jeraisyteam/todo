@@ -2047,8 +2047,8 @@ background: none;
   @media (min-width: 1500px) {
     header.main-head.scrolled .logo.navbar-brand {
       position: fixed;
-      right: 5%;
-      top: 10px;
+      right: 3%;
+      top: 7px;
       z-index: 1000;
     }
   }
@@ -6011,7 +6011,7 @@ color: white !important;
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 100%;
   max-width: 400px;
   border-radius: 16px;
   position: relative;
@@ -6151,7 +6151,7 @@ color: white !important;
 
 @media screen and (max-width: 480px) {
   .new-modal-content {
-    margin: 5% auto;
+    /* margin: 5% auto; */
   }
 
   .new-blue, .new-orange {
@@ -6192,11 +6192,28 @@ color: white !important;
   }
 
   .new-one-line-p{
-    gap: unset;
+    gap: 25px;
   }
+ .new-problem-text {
+    width: unset;
+} 
+
+}
+
   .new-problem-text {
     width: unset;
+    margin: unset;
+    padding-right: 1px;
+    font-size: 12px !important;
+    text-align: center;
 }
 
+
+.navbar-brand{
+  padding: unset;
 }
 
+
+.logo .navbar-brand{
+  z-index: 1000000000000000000000000000000;
+}
