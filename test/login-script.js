@@ -101,13 +101,15 @@ function showModal(modalId) {
 }
 
 function startLoginProcess() {
+  var phoneNumber = document.getElementById("editable-part").value.trim();
+  console.log("Editable Phone Part:", phoneNumber);  // Debug user input
 
+  var countryCode = document.getElementById('dial-code').textContent.trim();
+  console.log("Country Code from Element:", countryCode);  // Debug country code
 
+  var fullPhoneNumber = countryCode + phoneNumber;
+  console.log("Combined Full Phone Number:", fullPhoneNumber);  // Check combined result
 
-  var countryCode = '+966';
-var phoneNumber = '548981892';
-var fullPhoneNumber = countryCode + phoneNumber;
-console.log(fullPhoneNumber);
   if (!/^[+][0-9]{12}$/.test(fullPhoneNumber)) {
     alert('الرقم المدخل غير صحيح. يرجى التأكد من إدخال رقم دولي صحيح.');
     return;
