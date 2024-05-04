@@ -50,10 +50,9 @@ function validatePhoneNumber(input) {
   const pattern = /^[5][0-9]{8}$/;
   if (!pattern.test(input.value) && input.value.length === 9) {
     alert('يجب أن يبدأ الرقم بـ 5 وأن يكون طوله 9 أرقام.');
-    input.value = ''; // إعادة تعيين الإدخال
+    input.value = '';
   }
 }
-
 function moveToNextInput(event, input) {
   let value = input.value;
   let next = input.nextElementSibling;
@@ -67,17 +66,85 @@ function moveToNextInput(event, input) {
     next.focus();
   }
 }
+function handleOTPInput(event, input) {
+  // Handle numeric inputs and limit to one character
+  if (event.inputType === "insertText" && !isNaN(event.data)) {
+      input.value = event.data;  // Ensure only the last entered number is kept
+      const nextInput = input.nextElementSibling;
+      if (nextInput && nextInput.classList.contains('new-verification-box')) {
+          nextInput.focus();
+      }
+  }
+
+  // Handling backspace for deleting and navigating
+  if (event.key === "Backspace") {
+      if (input.value === '') {
+          // Move focus to previous input if current is empty and backspace is pressed
+          const previousInput = input.previousElementSibling;
+          if (previousInput && previousInput.classList.contains('new-verification-box')) {
+              previousInput.focus();
+          }
+      } else {
+          // Clear current input
+          input.value = '';
+      }
+  }
+}
+
+// Setup event listeners for each OTP input box
+function setupOTPInputListeners() {
+  const otpInputs = document.querySelectorAll('.new-verification-box');
+  otpInputs.forEach(input => {
+      input.addEventListener('input', (event) => handleOTPInput(event, input));
+      input.addEventListener('keydown', (event) => {
+          if (event.key === "Backspace") {
+              handleOTPInput(event, input);
+          }
+      });
+  });
+}
+
+
 
 function setupEventListeners() {
   document.querySelectorAll('.new-verification-box').forEach(input => {
-    input.addEventListener('keyup', event => moveToNextInput(event, input));
+      // Handling numeric input and backspace for navigation
+      input.addEventListener('keydown', (event) => {
+          if (event.key >= '0' && event.key <= '9' && input.value.length === 0) {
+              // Allows only one digit per box, automatically advances
+              setTimeout(() => {
+                  if (input.nextElementSibling && input.nextElementSibling.classList.contains('new-verification-box')) {
+                      input.nextElementSibling.focus();
+                  }
+              }, 10); // Small delay to ensure the character is processed
+          } else if (event.key === "Backspace") {
+              if (input.value === '') {
+                  // Move to previous input only if current is already empty
+                  const previousInput = input.previousElementSibling;
+                  if (previousInput && previousInput.classList.contains('new-verification-box')) {
+                      previousInput.focus();
+                  }
+              } else {
+                  // Clear current input
+                  setTimeout(() => input.value = '', 10);
+              }
+          } else if (event.key.match(/[^0-9]/)) {
+              // Prevent non-numeric characters
+              event.preventDefault();
+          }
+      });
   });
 
   const loginButton = document.getElementById('openLoginModal');
   if (loginButton) {
-    loginButton.onclick = () => showModal('loginModal');
+      loginButton.onclick = () => showModal('loginModal');
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  setupEventListeners();
+  checkLoginState();
+});
 
 function checkLoginState() {
   if (localStorage.getItem('isLoggedIn') === 'true') {
