@@ -258,7 +258,10 @@
       </label>
       <label for="">
         الجنسية
-        <input type="text" name="" id="" class="text-input">
+        <select name="nationality" id="nationality-dropdown" class="text-input">
+          <option value="" disabled selected style="text-align: right;">اختر الجنسية</option>
+        </select>
+        
       </label>
     </div>
 
@@ -373,6 +376,37 @@
 
 <script src="https://kit.fontawesome.com/cc21bd89d5.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  redirect: "follow"
+};
+
+fetch("https://test.najdah.app/jer/api/v1/client/nationality/list", requestOptions)
+  .then(response => response.json()) // Parsing the JSON response
+  .then(result => {
+    populateDropdown(result);
+  })
+  .catch(error => console.error('Error fetching nationalities:', error));
+
+// Function to populate dropdown
+function populateDropdown(data) {
+  const dropdown = document.getElementById('nationality-dropdown');
+  data.forEach(nationality => {
+    const option = document.createElement('option');
+    option.value = nationality.id; // Assuming you want to store the ID as the option value
+    option.textContent = nationality.name; // Displaying the name in the dropdown
+    dropdown.appendChild(option);
+  });
+}
+
+</script>
 <script src="script.js"></script>
 </body>
 </html>
